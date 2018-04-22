@@ -38,6 +38,8 @@
             this.soTienThuTxt = new DevExpress.XtraEditors.TextEdit();
             this.maPhieuThuTienTxt = new DevExpress.XtraEditors.TextEdit();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.tenNhanVienCb = new System.Windows.Forms.ComboBox();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.inBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -53,8 +55,6 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.phieuThuTienFrmBtnDis = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.tenNhanVienCb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.phieuThuTienGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuThuTienGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soTienNoTxt.Properties)).BeginInit();
@@ -89,6 +89,7 @@
             this.phieuThuTienGridView.OptionsBehavior.ReadOnly = true;
             this.phieuThuTienGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.phieuThuTienGridView.OptionsView.ShowGroupPanel = false;
+            this.phieuThuTienGridView.Click += new System.EventHandler(this.phieuThuTienGridView_Click);
             // 
             // phieuThuTienGridControl
             // 
@@ -113,6 +114,7 @@
             this.tenDocGiaCb.Size = new System.Drawing.Size(305, 32);
             this.tenDocGiaCb.Sorted = true;
             this.tenDocGiaCb.TabIndex = 3;
+            this.tenDocGiaCb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tenDocGiaCb_MouseClick);
             // 
             // labelControl6
             // 
@@ -199,6 +201,29 @@
             this.panelControl5.Size = new System.Drawing.Size(1687, 282);
             this.panelControl5.TabIndex = 1;
             // 
+            // tenNhanVienCb
+            // 
+            this.tenNhanVienCb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.tenNhanVienCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tenNhanVienCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenNhanVienCb.FormattingEnabled = true;
+            this.tenNhanVienCb.Location = new System.Drawing.Point(692, 203);
+            this.tenNhanVienCb.Name = "tenNhanVienCb";
+            this.tenNhanVienCb.Size = new System.Drawing.Size(305, 32);
+            this.tenNhanVienCb.Sorted = true;
+            this.tenNhanVienCb.TabIndex = 3;
+            this.tenNhanVienCb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tenNhanVienCb_MouseClick);
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(692, 160);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(169, 24);
+            this.labelControl4.TabIndex = 0;
+            this.labelControl4.Text = "Tên nhân viên thu:";
+            // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -247,6 +272,7 @@
             this.kLuuBtn.TabIndex = 6;
             this.kLuuBtn.TabStop = false;
             this.kLuuBtn.Text = "HỦY";
+            this.kLuuBtn.Click += new System.EventHandler(this.kLuuBtn_Click);
             // 
             // luuBtn
             // 
@@ -261,6 +287,7 @@
             this.luuBtn.TabIndex = 6;
             this.luuBtn.TabStop = false;
             this.luuBtn.Text = "LƯU";
+            this.luuBtn.Click += new System.EventHandler(this.luuBtn_Click);
             // 
             // xoaBtn
             // 
@@ -275,6 +302,7 @@
             this.xoaBtn.TabIndex = 6;
             this.xoaBtn.TabStop = false;
             this.xoaBtn.Text = "XÓA";
+            this.xoaBtn.Click += new System.EventHandler(this.xoaBtn_Click);
             // 
             // suaBtn
             // 
@@ -289,6 +317,7 @@
             this.suaBtn.TabIndex = 5;
             this.suaBtn.TabStop = false;
             this.suaBtn.Text = "SỬA";
+            this.suaBtn.Click += new System.EventHandler(this.suaBtn_Click);
             // 
             // panelControl3
             // 
@@ -319,6 +348,7 @@
             this.themBtn.TabIndex = 4;
             this.themBtn.TabStop = false;
             this.themBtn.Text = "THÊM";
+            this.themBtn.Click += new System.EventHandler(this.themBtn_Click);
             // 
             // DocGiaFrmBtn
             // 
@@ -417,6 +447,7 @@
             this.menuBtn.TabIndex = 3;
             this.menuBtn.TabStop = false;
             this.menuBtn.Text = "MENU";
+            this.menuBtn.Click += new System.EventHandler(this.menuBtn_Click);
             // 
             // panelControl2
             // 
@@ -463,28 +494,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1925, 138);
             this.panelControl1.TabIndex = 5;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(692, 160);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(169, 24);
-            this.labelControl4.TabIndex = 0;
-            this.labelControl4.Text = "Tên nhân viên thu:";
-            // 
-            // tenNhanVienCb
-            // 
-            this.tenNhanVienCb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.tenNhanVienCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tenNhanVienCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenNhanVienCb.FormattingEnabled = true;
-            this.tenNhanVienCb.Location = new System.Drawing.Point(692, 203);
-            this.tenNhanVienCb.Name = "tenNhanVienCb";
-            this.tenNhanVienCb.Size = new System.Drawing.Size(305, 32);
-            this.tenNhanVienCb.Sorted = true;
-            this.tenNhanVienCb.TabIndex = 3;
             // 
             // PhieuThuTienFrm
             // 

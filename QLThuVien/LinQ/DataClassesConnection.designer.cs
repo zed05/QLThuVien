@@ -188,6 +188,13 @@ namespace QLThuVien.LinQ
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<LOAISACH_PROCResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.PHIEUTHU_PROC")]
+		public ISingleResult<PHIEUTHU_PROCResult> PHIEUTHU_PROC()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<PHIEUTHU_PROCResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CHITIETPHIEUMUON")]
@@ -2515,6 +2522,140 @@ namespace QLThuVien.LinQ
 				if ((this._TenLoai != value))
 				{
 					this._TenLoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class PHIEUTHU_PROCResult
+	{
+		
+		private int _MaPhieuThuTien;
+		
+		private System.Nullable<double> _SoTienNo;
+		
+		private System.Nullable<double> _SoTienThu;
+		
+		private System.Nullable<int> _MaDocGia;
+		
+		private System.Nullable<int> _MaNhanVien;
+		
+		private string _HoTenDocGia;
+		
+		private string _HoTenNhanVien;
+		
+		public PHIEUTHU_PROCResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhieuThuTien", DbType="Int NOT NULL")]
+		public int MaPhieuThuTien
+		{
+			get
+			{
+				return this._MaPhieuThuTien;
+			}
+			set
+			{
+				if ((this._MaPhieuThuTien != value))
+				{
+					this._MaPhieuThuTien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoTienNo", DbType="Float")]
+		public System.Nullable<double> SoTienNo
+		{
+			get
+			{
+				return this._SoTienNo;
+			}
+			set
+			{
+				if ((this._SoTienNo != value))
+				{
+					this._SoTienNo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoTienThu", DbType="Float")]
+		public System.Nullable<double> SoTienThu
+		{
+			get
+			{
+				return this._SoTienThu;
+			}
+			set
+			{
+				if ((this._SoTienThu != value))
+				{
+					this._SoTienThu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDocGia", DbType="Int")]
+		public System.Nullable<int> MaDocGia
+		{
+			get
+			{
+				return this._MaDocGia;
+			}
+			set
+			{
+				if ((this._MaDocGia != value))
+				{
+					this._MaDocGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="Int")]
+		public System.Nullable<int> MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this._MaNhanVien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTenDocGia", DbType="NVarChar(40)")]
+		public string HoTenDocGia
+		{
+			get
+			{
+				return this._HoTenDocGia;
+			}
+			set
+			{
+				if ((this._HoTenDocGia != value))
+				{
+					this._HoTenDocGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTenNhanVien", DbType="NVarChar(50)")]
+		public string HoTenNhanVien
+		{
+			get
+			{
+				return this._HoTenNhanVien;
+			}
+			set
+			{
+				if ((this._HoTenNhanVien != value))
+				{
+					this._HoTenNhanVien = value;
 				}
 			}
 		}

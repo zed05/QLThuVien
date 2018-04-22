@@ -133,4 +133,15 @@
       <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.PHIEUTHU_PROC" Method="PHIEUTHU_PROC">
+    <ElementType Name="PHIEUTHU_PROCResult">
+      <Column Name="MaPhieuThuTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SoTienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SoTienThu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
