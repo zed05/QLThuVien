@@ -21,6 +21,9 @@ namespace QLThuVien
         {
             var data = db.database().LOAISACH_PROC().ToList();
             f.loaiSachGridControl.DataSource = data;
+
+            f.loaiSachGridView.Columns[0].Caption = "Mã loại";
+            f.loaiSachGridView.Columns[1].Caption = "Tên loại";
         }
 
         public void setNull(LoaiSachFrm f)

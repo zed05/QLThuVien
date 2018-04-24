@@ -21,6 +21,12 @@ namespace QLThuVien
         {
             var data = db.database().LOGIN_PROC().ToList();
             f.thongTinDangNhapGridControl.DataSource = data;
+
+            f.thongTinDangNhapGridView.Columns[0].Caption = "ID";
+            f.thongTinDangNhapGridView.Columns[1].Caption = "Password";
+            f.thongTinDangNhapGridView.Columns[2].Caption = "Ghi chú";
+            f.thongTinDangNhapGridView.Columns[3].Visible = false;
+            f.thongTinDangNhapGridView.Columns[4].Caption = "Tên nhân viên";
         }
 
         public void setNull(ThongTinDangNhapFrm f)

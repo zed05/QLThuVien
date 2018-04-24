@@ -14,9 +14,12 @@ namespace QLThuVien
 {
     public partial class MainFrm : DevExpress.XtraEditors.XtraForm
     {
-        public MainFrm()
+        public string loginName;
+        public MainFrm(string userID)
         {
             InitializeComponent();
+            userNameLabel.Text = userID;
+            loginName = userID;
         }
 
         private void exitMainFrmBtn_Click(object sender, EventArgs e)
@@ -26,28 +29,28 @@ namespace QLThuVien
 
         private void docGiaFrmBtn_Click(object sender, EventArgs e)
         {
-            DocGiaFrm f = new DocGiaFrm();
+            DocGiaFrm f = new DocGiaFrm(loginName);
             f.Show();
             this.Hide();
         }
 
         private void sachFrmBtn_Click(object sender, EventArgs e)
         {
-            SachFrm f = new SachFrm();
+            SachFrm f = new SachFrm(loginName);
             f.Show();
             this.Hide();
         }
 
         private void nhanVienFrmBtn_Click(object sender, EventArgs e)
         {
-            NhanVienFrm f = new NhanVienFrm();
+            NhanVienFrm f = new NhanVienFrm(loginName);
             f.Show();
             this.Hide();
         }
 
         private void loaiSachFrmBtn_Click(object sender, EventArgs e)
         {
-            LoaiSachFrm f = new LoaiSachFrm();
+            LoaiSachFrm f = new LoaiSachFrm(loginName);
             f.Show();
             this.Hide();
         }
@@ -61,21 +64,28 @@ namespace QLThuVien
 
         private void phieuThuTienFrmBtn_Click(object sender, EventArgs e)
         {
-            PhieuThuTienFrm f = new PhieuThuTienFrm();
+            PhieuThuTienFrm f = new PhieuThuTienFrm(loginName);
             f.Show();
             this.Hide();
         }
 
         private void phieuMuonSachFrmBtn_Click(object sender, EventArgs e)
         {
-            PhieuMuonSachFrm f = new PhieuMuonSachFrm();
+            PhieuMuonSachFrm f = new PhieuMuonSachFrm(loginName);
             f.Show();
             this.Hide();
         }
 
         private void chucVuFrmBtn_Click(object sender, EventArgs e)
         {
-            ChucVuFrm f = new ChucVuFrm();
+            ChucVuFrm f = new ChucVuFrm(loginName);
+            f.Show();
+            this.Hide();
+        }
+
+        private void thongTinDangNhapFrmBtn_Click(object sender, EventArgs e)
+        {
+            ThongTinDangNhapFrm f = new ThongTinDangNhapFrm(loginName);
             f.Show();
             this.Hide();
         }

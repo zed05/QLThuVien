@@ -21,6 +21,10 @@ namespace QLThuVien
         {
             var data = db.database().CHUCVU_PROC().ToList();
             f.chucVuGridControl.DataSource = data;
+
+            f.chucVuGridView.Columns[0].Caption = "Mã chức vụ";
+            f.chucVuGridView.Columns[1].Caption = "Tên chức vụ";
+            f.chucVuGridView.Columns[2].Caption = "Mô tả";
         }
 
         public void setNull(ChucVuFrm f)

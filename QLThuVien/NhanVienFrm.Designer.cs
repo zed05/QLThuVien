@@ -513,11 +513,16 @@
             // 
             // nhanVienGridView
             // 
-            this.nhanVienGridView.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nhanVienGridView.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.nhanVienGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhanVienGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F);
             this.nhanVienGridView.Appearance.FocusedRow.Options.UseFont = true;
-            this.nhanVienGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nhanVienGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.nhanVienGridView.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
+            this.nhanVienGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.nhanVienGridView.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.nhanVienGridView.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.nhanVienGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.nhanVienGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F);
             this.nhanVienGridView.Appearance.Row.Options.UseFont = true;
             this.nhanVienGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nhanVienGridView.AppearancePrint.EvenRow.Options.UseFont = true;

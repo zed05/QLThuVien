@@ -23,6 +23,13 @@ namespace QLThuVien
             f.nhanVienGridControl.DataSource = data;
 
             f.nhanVienGridView.Columns[5].Visible = false;
+
+            f.nhanVienGridView.Columns[0].Caption = "Mã nhân viên";
+            f.nhanVienGridView.Columns[1].Caption = "Tên nhân viên";
+            f.nhanVienGridView.Columns[2].Caption = "Ngày sinh";
+            f.nhanVienGridView.Columns[3].Caption = "Địa chỉ";
+            f.nhanVienGridView.Columns[4].Caption = "Điện thoại";
+            f.nhanVienGridView.Columns[6].Caption = "Tên chức vụ";
         }
 
         public void setNull(NhanVienFrm f)

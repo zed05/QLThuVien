@@ -583,9 +583,15 @@
             // 
             this.docGiaGridView.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.docGiaGridView.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.docGiaGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docGiaGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.docGiaGridView.Appearance.FocusedRow.Options.UseFont = true;
-            this.docGiaGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docGiaGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.docGiaGridView.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
+            this.docGiaGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.docGiaGridView.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.docGiaGridView.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.docGiaGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.docGiaGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.docGiaGridView.Appearance.Row.Options.UseFont = true;
             this.docGiaGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.docGiaGridView.AppearancePrint.EvenRow.Options.UseFont = true;

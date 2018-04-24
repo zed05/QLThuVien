@@ -256,11 +256,16 @@
             // 
             // phieuMuonSachGridView
             // 
-            this.phieuMuonSachGridView.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phieuMuonSachGridView.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.phieuMuonSachGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuMuonSachGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F);
             this.phieuMuonSachGridView.Appearance.FocusedRow.Options.UseFont = true;
-            this.phieuMuonSachGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuMuonSachGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.phieuMuonSachGridView.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
+            this.phieuMuonSachGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.phieuMuonSachGridView.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.phieuMuonSachGridView.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.phieuMuonSachGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.phieuMuonSachGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F);
             this.phieuMuonSachGridView.Appearance.Row.Options.UseFont = true;
             this.phieuMuonSachGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phieuMuonSachGridView.AppearancePrint.EvenRow.Options.UseFont = true;

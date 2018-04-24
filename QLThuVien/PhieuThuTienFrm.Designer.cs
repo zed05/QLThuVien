@@ -75,11 +75,16 @@
             // 
             // phieuThuTienGridView
             // 
-            this.phieuThuTienGridView.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phieuThuTienGridView.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.phieuThuTienGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuThuTienGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F);
             this.phieuThuTienGridView.Appearance.FocusedRow.Options.UseFont = true;
-            this.phieuThuTienGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuThuTienGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.phieuThuTienGridView.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
+            this.phieuThuTienGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.phieuThuTienGridView.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.phieuThuTienGridView.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.phieuThuTienGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.phieuThuTienGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F);
             this.phieuThuTienGridView.Appearance.Row.Options.UseFont = true;
             this.phieuThuTienGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phieuThuTienGridView.AppearancePrint.EvenRow.Options.UseFont = true;

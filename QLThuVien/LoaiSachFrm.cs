@@ -17,7 +17,9 @@ namespace QLThuVien
 
         bool addBtn = false;
 
-        public LoaiSachFrm()
+        public string loginName;
+
+        public LoaiSachFrm(string id)
         {
             InitializeComponent();
             ls = new ClassLoaiSach();
@@ -25,12 +27,14 @@ namespace QLThuVien
             ls.setButton(this, true);
             ls.enableOnject(this, false);
             ls.loadRowSelected(this);
+
+            loginName = id;
         }
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainFrm f = new MainFrm();
+            MainFrm f = new MainFrm(loginName);
             f.Show();
         }
 
@@ -97,7 +101,7 @@ namespace QLThuVien
         private void SachFrmBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            SachFrm f = new SachFrm();
+            SachFrm f = new SachFrm(loginName);
             f.Show();
         }
 

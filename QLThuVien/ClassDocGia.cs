@@ -24,6 +24,15 @@ namespace QLThuVien
 
             f.docGiaGridView.Columns[8].Visible = false;
             f.docGiaGridView.Columns[9].Visible = false;
+
+            f.docGiaGridView.Columns[0].Caption = "Mã đọc giả";
+            f.docGiaGridView.Columns[1].Caption = "Tên đọc giả";
+            f.docGiaGridView.Columns[2].Caption = "Ngày sinh";
+            f.docGiaGridView.Columns[3].Caption = "Địa chỉ";
+            f.docGiaGridView.Columns[4].Caption = "Email";
+            f.docGiaGridView.Columns[5].Caption = "Ngày lập thẻ";
+            f.docGiaGridView.Columns[6].Caption = "Ngày hết hạn";
+            f.docGiaGridView.Columns[7].Caption = "Tiền nợ";
         }
 
         public void setNull(DocGiaFrm f)

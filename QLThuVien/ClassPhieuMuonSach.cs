@@ -21,6 +21,13 @@ namespace QLThuVien
         {
             var data = db.database().PHIEUMUON_PROC().ToList();
             f.phieuMuonSachGridControl.DataSource = data;
+
+            f.phieuMuonSachGridView.Columns[0].Caption = "Mã phiếu mượn";
+            f.phieuMuonSachGridView.Columns[1].Caption = "Ngày mượn";
+            f.phieuMuonSachGridView.Columns[2].Visible = false;
+            f.phieuMuonSachGridView.Columns[3].Visible = false;
+            f.phieuMuonSachGridView.Columns[4].Caption = "Tên đọc giả";
+            f.phieuMuonSachGridView.Columns[5].Caption = "Tên nhân viên";
         }
 
         public void setNull(PhieuMuonSachFrm f)

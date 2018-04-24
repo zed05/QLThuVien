@@ -170,6 +170,7 @@
             this.thongTinDangNhapFrmBtn.TabIndex = 1;
             this.thongTinDangNhapFrmBtn.TabStop = false;
             this.thongTinDangNhapFrmBtn.Text = "THÔNG TIN\r\nĐĂNG NHẬP";
+            this.thongTinDangNhapFrmBtn.Click += new System.EventHandler(this.thongTinDangNhapFrmBtn_Click);
             // 
             // chucVuFrmBtn
             // 

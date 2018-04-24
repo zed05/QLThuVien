@@ -32,12 +32,12 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.exitBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.emailLoginTxt = new DevExpress.XtraEditors.TextEdit();
+            this.idLoginTxt = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.passLoginTxt = new DevExpress.XtraEditors.TextEdit();
             this.submitBtn = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.emailLoginTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idLoginTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passLoginTxt.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,15 +79,15 @@
             this.exitBtn.Text = "X";
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // emailLoginTxt
+            // idLoginTxt
             // 
-            this.emailLoginTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.emailLoginTxt.Location = new System.Drawing.Point(85, 263);
-            this.emailLoginTxt.Name = "emailLoginTxt";
-            this.emailLoginTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLoginTxt.Properties.Appearance.Options.UseFont = true;
-            this.emailLoginTxt.Size = new System.Drawing.Size(387, 30);
-            this.emailLoginTxt.TabIndex = 1;
+            this.idLoginTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.idLoginTxt.Location = new System.Drawing.Point(85, 263);
+            this.idLoginTxt.Name = "idLoginTxt";
+            this.idLoginTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idLoginTxt.Properties.Appearance.Options.UseFont = true;
+            this.idLoginTxt.Size = new System.Drawing.Size(387, 30);
+            this.idLoginTxt.TabIndex = 1;
             // 
             // labelControl2
             // 
@@ -95,9 +95,9 @@
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Location = new System.Drawing.Point(85, 224);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(56, 24);
+            this.labelControl2.Size = new System.Drawing.Size(105, 24);
             this.labelControl2.TabIndex = 3;
-            this.labelControl2.Text = "Email:";
+            this.labelControl2.Text = "User Name:";
             // 
             // labelControl3
             // 
@@ -156,7 +156,7 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.passLoginTxt);
             this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.emailLoginTxt);
+            this.Controls.Add(this.idLoginTxt);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.labelControl1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,7 +167,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginFrm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginFrm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.emailLoginTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idLoginTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passLoginTxt.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,7 +179,7 @@
         public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         public DevExpress.XtraEditors.SimpleButton exitBtn;
-        public DevExpress.XtraEditors.TextEdit emailLoginTxt;
+        public DevExpress.XtraEditors.TextEdit idLoginTxt;
         public DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.LabelControl labelControl3;
         public DevExpress.XtraEditors.TextEdit passLoginTxt;

@@ -350,11 +350,16 @@
             // 
             // thongTinDangNhapGridView
             // 
-            this.thongTinDangNhapGridView.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thongTinDangNhapGridView.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.thongTinDangNhapGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thongTinDangNhapGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F);
             this.thongTinDangNhapGridView.Appearance.FocusedRow.Options.UseFont = true;
-            this.thongTinDangNhapGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thongTinDangNhapGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.thongTinDangNhapGridView.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
+            this.thongTinDangNhapGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.thongTinDangNhapGridView.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.thongTinDangNhapGridView.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.thongTinDangNhapGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.thongTinDangNhapGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F);
             this.thongTinDangNhapGridView.Appearance.Row.Options.UseFont = true;
             this.thongTinDangNhapGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thongTinDangNhapGridView.AppearancePrint.EvenRow.Options.UseFont = true;

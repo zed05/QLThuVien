@@ -471,11 +471,16 @@
             // 
             // sachGridView
             // 
-            this.sachGridView.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sachGridView.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.sachGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sachGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F);
             this.sachGridView.Appearance.FocusedRow.Options.UseFont = true;
-            this.sachGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sachGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.sachGridView.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
+            this.sachGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.sachGridView.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.sachGridView.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.sachGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.sachGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F);
             this.sachGridView.Appearance.Row.Options.UseFont = true;
             this.sachGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sachGridView.AppearancePrint.EvenRow.Options.UseFont = true;

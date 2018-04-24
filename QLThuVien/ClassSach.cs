@@ -22,7 +22,14 @@ namespace QLThuVien
             var data = db.database().SACH_PROC().ToList();
             f.sachGridControl.DataSource = data;
 
+
+            f.sachGridView.Columns[0].Caption = "Mã sách";
+            f.sachGridView.Columns[1].Caption = "Tên sách";
+            f.sachGridView.Columns[2].Caption = "Tác giả";
+            f.sachGridView.Columns[3].Caption = "Năm xuất bản";
+            f.sachGridView.Columns[4].Caption = "Nhà xuất bản";
             f.sachGridView.Columns[5].Visible = false;
+            f.sachGridView.Columns[6].Caption = "Tên loại";
         }
 
         public void loadLoaiData(SachFrm f)

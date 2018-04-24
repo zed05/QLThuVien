@@ -17,7 +17,9 @@ namespace QLThuVien
 
         bool addBtn = false;
 
-        public PhieuThuTienFrm()
+        public string loginName;
+
+        public PhieuThuTienFrm(string id)
         {
             InitializeComponent();
             pt = new ClassPhieuThuTien();
@@ -27,12 +29,14 @@ namespace QLThuVien
             pt.setButton(this, true);
             pt.enableObject(this, false);
             pt.loadRowSelected(this);
+
+            loginName = id;
         }
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            MainFrm f = new MainFrm();
+            MainFrm f = new MainFrm(loginName);
             f.Show();
         }
 
@@ -112,14 +116,14 @@ namespace QLThuVien
 
         private void docGiaFrmBtn_Click(object sender, EventArgs e)
         {
-            DocGiaFrm f = new DocGiaFrm();
+            DocGiaFrm f = new DocGiaFrm(loginName);
             f.Show();
             this.Close();
         }
 
         private void phieuMuonSachFrmBtn_Click(object sender, EventArgs e)
         {
-            PhieuMuonSachFrm f = new PhieuMuonSachFrm();
+            PhieuMuonSachFrm f = new PhieuMuonSachFrm(loginName);
             f.Show();
             this.Close();
         }

@@ -21,6 +21,14 @@ namespace QLThuVien
         {
             var data = db.database().PHIEUTHU_PROC().ToList();
             f.phieuThuTienGridControl.DataSource = data;
+
+            f.phieuThuTienGridView.Columns[0].Caption = "Mã phiếu thu";
+            f.phieuThuTienGridView.Columns[1].Caption = "Số tiền nợ";
+            f.phieuThuTienGridView.Columns[2].Caption = "Số tiền thu";
+            f.phieuThuTienGridView.Columns[3].Visible = false;
+            f.phieuThuTienGridView.Columns[4].Visible = false;
+            f.phieuThuTienGridView.Columns[5].Caption = "Tên đọc giả";
+            f.phieuThuTienGridView.Columns[6].Caption = "Tên nhân viên";
         }
 
         public void loadDocGiaData(PhieuThuTienFrm f)

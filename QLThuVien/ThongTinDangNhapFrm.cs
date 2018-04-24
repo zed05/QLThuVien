@@ -17,7 +17,9 @@ namespace QLThuVien
 
         bool addBtn = false;
 
-        public ThongTinDangNhapFrm()
+        public string loginName;
+
+        public ThongTinDangNhapFrm(string id)
         {
             InitializeComponent();
             dn = new ClassThongTinDangNhap();
@@ -26,25 +28,27 @@ namespace QLThuVien
             dn.enableObject(this, false);
             dn.loadRowSelected(this);
             dn.loadNhanVienData(this);
+
+            loginName = id;
         }
 
         private void menuBtn_Click(object sender, EventArgs e)
         {
-            MainFrm f = new MainFrm();
+            MainFrm f = new MainFrm(loginName);
             f.Show();
             this.Close();
         }
 
         private void nhanVienFrmBtn_Click(object sender, EventArgs e)
         {
-            NhanVienFrm f = new NhanVienFrm();
+            NhanVienFrm f = new NhanVienFrm(loginName);
             f.Show();
             this.Close();
         }
 
         private void chucVuFrmBtn_Click(object sender, EventArgs e)
         {
-            ChucVuFrm f = new ChucVuFrm();
+            ChucVuFrm f = new ChucVuFrm(loginName);
             f.Show();
             this.Close();
         }

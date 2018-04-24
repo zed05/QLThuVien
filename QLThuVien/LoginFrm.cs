@@ -23,7 +23,7 @@ namespace QLThuVien
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void LoginFrm_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,11 +38,11 @@ namespace QLThuVien
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            //string id = emailLoginTxt.Text.Trim();
-            //string pwd = passLoginTxt.Text.Trim();
+            string id = idLoginTxt.Text.Trim();
+            string pwd = passLoginTxt.Text.Trim();
 
-            string id = "Admin";
-            string pwd = "1";
+            //string id = "Admin";
+            //string pwd = "1";
 
             var data = db.database().LOGINs.SingleOrDefault(a => a.IDLOGIN.Trim() == id && a.PWD.Trim() == pwd);
 
@@ -53,7 +53,7 @@ namespace QLThuVien
             else
             {
                 //MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MainFrm f = new MainFrm();
+                MainFrm f = new MainFrm(id);
                 f.Show();
                 this.Hide();
             }

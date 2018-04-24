@@ -178,11 +178,16 @@
             // 
             // chucVuGridView
             // 
-            this.chucVuGridView.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chucVuGridView.Appearance.ColumnFilterButton.Options.UseFont = true;
-            this.chucVuGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chucVuGridView.Appearance.FocusedRow.Font = new System.Drawing.Font("Tahoma", 12F);
             this.chucVuGridView.Appearance.FocusedRow.Options.UseFont = true;
-            this.chucVuGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chucVuGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.chucVuGridView.Appearance.HeaderPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
+            this.chucVuGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.chucVuGridView.Appearance.HeaderPanel.Options.UseForeColor = true;
+            this.chucVuGridView.Appearance.HeaderPanel.Options.UseTextOptions = true;
+            this.chucVuGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.chucVuGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F);
             this.chucVuGridView.Appearance.Row.Options.UseFont = true;
             this.chucVuGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chucVuGridView.AppearancePrint.EvenRow.Options.UseFont = true;
