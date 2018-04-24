@@ -57,6 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChucVuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChucVuFrm.Designer.cs">
+      <DependentUpon>ChucVuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassChucVu.cs" />
     <Compile Include="ClassConnection.cs" />
     <Compile Include="ClassDocGia.cs" />
     <Compile Include="ClassLoaiSach.cs" />
@@ -119,6 +126,9 @@
     <Compile Include="SachFrm.Designer.cs">
       <DependentUpon>SachFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChucVuFrm.resx">
+      <DependentUpon>ChucVuFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocGiaFrm.resx">
       <DependentUpon>DocGiaFrm.cs</DependentUpon>
     </EmbeddedResource>

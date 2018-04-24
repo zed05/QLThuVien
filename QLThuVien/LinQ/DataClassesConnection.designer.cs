@@ -202,6 +202,13 @@ namespace QLThuVien.LinQ
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<PHIEUMUON_PROCResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CHUCVU_PROC")]
+		public ISingleResult<CHUCVU_PROCResult> CHUCVU_PROC()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<CHUCVU_PROCResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CHITIETPHIEUMUON")]
@@ -2872,6 +2879,68 @@ namespace QLThuVien.LinQ
 				if ((this._HoTenNhanVien != value))
 				{
 					this._HoTenNhanVien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class CHUCVU_PROCResult
+	{
+		
+		private int _MaCV;
+		
+		private string _TenCV;
+		
+		private string _MoTa;
+		
+		public CHUCVU_PROCResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCV", DbType="Int NOT NULL")]
+		public int MaCV
+		{
+			get
+			{
+				return this._MaCV;
+			}
+			set
+			{
+				if ((this._MaCV != value))
+				{
+					this._MaCV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenCV", DbType="NVarChar(50)")]
+		public string TenCV
+		{
+			get
+			{
+				return this._TenCV;
+			}
+			set
+			{
+				if ((this._TenCV != value))
+				{
+					this._TenCV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTa", DbType="NVarChar(200)")]
+		public string MoTa
+		{
+			get
+			{
+				return this._MoTa;
+			}
+			set
+			{
+				if ((this._MoTa != value))
+				{
+					this._MoTa = value;
 				}
 			}
 		}

@@ -157,4 +157,11 @@
       <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.CHUCVU_PROC" Method="CHUCVU_PROC">
+    <ElementType Name="CHUCVU_PROCResult">
+      <Column Name="MaCV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

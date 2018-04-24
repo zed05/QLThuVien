@@ -70,6 +70,7 @@ namespace QLThuVien
             if(result == DialogResult.Yes)
             {
                 dg.delete(this);
+                dg.loadRowSelected(this);
             }
         }
 

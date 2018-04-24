@@ -86,6 +86,7 @@ namespace QLThuVien
             if(result == DialogResult.Yes)
             {
                 nv.delete(this);
+                nv.loadRowSelected(this);
             }
         }
 

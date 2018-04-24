@@ -72,5 +72,12 @@ namespace QLThuVien
             f.Show();
             this.Hide();
         }
+
+        private void chucVuFrmBtn_Click(object sender, EventArgs e)
+        {
+            ChucVuFrm f = new ChucVuFrm();
+            f.Show();
+            this.Hide();
+        }
     }
 }
