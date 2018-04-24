@@ -77,7 +77,6 @@ namespace QLThuVien
         public void add(DocGiaFrm f)
         {
             DOCGIA dg = new DOCGIA();
-            dg.MaDocGia = int.Parse(f.maDocGiaTxt.Text);
             dg.HoTenDocGia = f.tenDocGiaTxt.Text;
             dg.NgaySinh = Convert.ToDateTime(f.ngaySinhDT.Text);
             dg.DiaChi = f.diaChiTxt.Text;

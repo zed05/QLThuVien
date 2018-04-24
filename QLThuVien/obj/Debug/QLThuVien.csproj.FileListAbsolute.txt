@@ -107,3 +107,4 @@ E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.csproj.CopyComplete
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.exe
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.pdb
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.PhieuThuTienFrm.resources
+E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.PhieuMuonSachFrm.resources

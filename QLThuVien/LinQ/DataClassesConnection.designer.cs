@@ -195,6 +195,13 @@ namespace QLThuVien.LinQ
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<PHIEUTHU_PROCResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.PHIEUMUON_PROC")]
+		public ISingleResult<PHIEUMUON_PROCResult> PHIEUMUON_PROC()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<PHIEUMUON_PROCResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CHITIETPHIEUMUON")]
@@ -1349,6 +1356,8 @@ namespace QLThuVien.LinQ
 		
 		private EntitySet<LOGIN> _LOGINs;
 		
+		private EntitySet<PHIEUMUONSACH> _PHIEUMUONSACHes;
+		
 		private EntitySet<PHIEUTHUTIEN> _PHIEUTHUTIENs;
 		
 		private EntityRef<CHUCVU> _CHUCVU;
@@ -1374,6 +1383,7 @@ namespace QLThuVien.LinQ
 		public NHANVIEN()
 		{
 			this._LOGINs = new EntitySet<LOGIN>(new Action<LOGIN>(this.attach_LOGINs), new Action<LOGIN>(this.detach_LOGINs));
+			this._PHIEUMUONSACHes = new EntitySet<PHIEUMUONSACH>(new Action<PHIEUMUONSACH>(this.attach_PHIEUMUONSACHes), new Action<PHIEUMUONSACH>(this.detach_PHIEUMUONSACHes));
 			this._PHIEUTHUTIENs = new EntitySet<PHIEUTHUTIEN>(new Action<PHIEUTHUTIEN>(this.attach_PHIEUTHUTIENs), new Action<PHIEUTHUTIEN>(this.detach_PHIEUTHUTIENs));
 			this._CHUCVU = default(EntityRef<CHUCVU>);
 			OnCreated();
@@ -1516,6 +1526,19 @@ namespace QLThuVien.LinQ
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHANVIEN_PHIEUMUONSACH", Storage="_PHIEUMUONSACHes", ThisKey="MaNhanVien", OtherKey="MaNhanVien")]
+		public EntitySet<PHIEUMUONSACH> PHIEUMUONSACHes
+		{
+			get
+			{
+				return this._PHIEUMUONSACHes;
+			}
+			set
+			{
+				this._PHIEUMUONSACHes.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHANVIEN_PHIEUTHUTIEN", Storage="_PHIEUTHUTIENs", ThisKey="MaNhanVien", OtherKey="MaNhanVien")]
 		public EntitySet<PHIEUTHUTIEN> PHIEUTHUTIENs
 		{
@@ -1595,6 +1618,18 @@ namespace QLThuVien.LinQ
 			entity.NHANVIEN = null;
 		}
 		
+		private void attach_PHIEUMUONSACHes(PHIEUMUONSACH entity)
+		{
+			this.SendPropertyChanging();
+			entity.NHANVIEN = this;
+		}
+		
+		private void detach_PHIEUMUONSACHes(PHIEUMUONSACH entity)
+		{
+			this.SendPropertyChanging();
+			entity.NHANVIEN = null;
+		}
+		
 		private void attach_PHIEUTHUTIENs(PHIEUTHUTIEN entity)
 		{
 			this.SendPropertyChanging();
@@ -1620,7 +1655,11 @@ namespace QLThuVien.LinQ
 		
 		private System.Nullable<int> _MaDocGia;
 		
+		private System.Nullable<int> _MaNhanVien;
+		
 		private EntitySet<CHITIETPHIEUMUON> _CHITIETPHIEUMUONs;
+		
+		private EntityRef<NHANVIEN> _NHANVIEN;
 		
 		private EntityRef<DOCGIA> _DOCGIA;
 		
@@ -1634,11 +1673,14 @@ namespace QLThuVien.LinQ
     partial void OnNgayMuonChanged();
     partial void OnMaDocGiaChanging(System.Nullable<int> value);
     partial void OnMaDocGiaChanged();
+    partial void OnMaNhanVienChanging(System.Nullable<int> value);
+    partial void OnMaNhanVienChanged();
     #endregion
 		
 		public PHIEUMUONSACH()
 		{
 			this._CHITIETPHIEUMUONs = new EntitySet<CHITIETPHIEUMUON>(new Action<CHITIETPHIEUMUON>(this.attach_CHITIETPHIEUMUONs), new Action<CHITIETPHIEUMUON>(this.detach_CHITIETPHIEUMUONs));
+			this._NHANVIEN = default(EntityRef<NHANVIEN>);
 			this._DOCGIA = default(EntityRef<DOCGIA>);
 			OnCreated();
 		}
@@ -1707,6 +1749,30 @@ namespace QLThuVien.LinQ
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="Int")]
+		public System.Nullable<int> MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					if (this._NHANVIEN.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaNhanVienChanging(value);
+					this.SendPropertyChanging();
+					this._MaNhanVien = value;
+					this.SendPropertyChanged("MaNhanVien");
+					this.OnMaNhanVienChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PHIEUMUONSACH_CHITIETPHIEUMUON", Storage="_CHITIETPHIEUMUONs", ThisKey="MaPhieuMuon", OtherKey="MaPhieuMuon")]
 		public EntitySet<CHITIETPHIEUMUON> CHITIETPHIEUMUONs
 		{
@@ -1717,6 +1783,40 @@ namespace QLThuVien.LinQ
 			set
 			{
 				this._CHITIETPHIEUMUONs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NHANVIEN_PHIEUMUONSACH", Storage="_NHANVIEN", ThisKey="MaNhanVien", OtherKey="MaNhanVien", IsForeignKey=true)]
+		public NHANVIEN NHANVIEN
+		{
+			get
+			{
+				return this._NHANVIEN.Entity;
+			}
+			set
+			{
+				NHANVIEN previousValue = this._NHANVIEN.Entity;
+				if (((previousValue != value) 
+							|| (this._NHANVIEN.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NHANVIEN.Entity = null;
+						previousValue.PHIEUMUONSACHes.Remove(this);
+					}
+					this._NHANVIEN.Entity = value;
+					if ((value != null))
+					{
+						value.PHIEUMUONSACHes.Add(this);
+						this._MaNhanVien = value.MaNhanVien;
+					}
+					else
+					{
+						this._MaNhanVien = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("NHANVIEN");
+				}
 			}
 		}
 		
@@ -2592,6 +2692,122 @@ namespace QLThuVien.LinQ
 				if ((this._SoTienThu != value))
 				{
 					this._SoTienThu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaDocGia", DbType="Int")]
+		public System.Nullable<int> MaDocGia
+		{
+			get
+			{
+				return this._MaDocGia;
+			}
+			set
+			{
+				if ((this._MaDocGia != value))
+				{
+					this._MaDocGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="Int")]
+		public System.Nullable<int> MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this._MaNhanVien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTenDocGia", DbType="NVarChar(40)")]
+		public string HoTenDocGia
+		{
+			get
+			{
+				return this._HoTenDocGia;
+			}
+			set
+			{
+				if ((this._HoTenDocGia != value))
+				{
+					this._HoTenDocGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTenNhanVien", DbType="NVarChar(50)")]
+		public string HoTenNhanVien
+		{
+			get
+			{
+				return this._HoTenNhanVien;
+			}
+			set
+			{
+				if ((this._HoTenNhanVien != value))
+				{
+					this._HoTenNhanVien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class PHIEUMUON_PROCResult
+	{
+		
+		private int _MaPhieuMuon;
+		
+		private System.DateTime _NgayMuon;
+		
+		private System.Nullable<int> _MaDocGia;
+		
+		private System.Nullable<int> _MaNhanVien;
+		
+		private string _HoTenDocGia;
+		
+		private string _HoTenNhanVien;
+		
+		public PHIEUMUON_PROCResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhieuMuon", DbType="Int NOT NULL")]
+		public int MaPhieuMuon
+		{
+			get
+			{
+				return this._MaPhieuMuon;
+			}
+			set
+			{
+				if ((this._MaPhieuMuon != value))
+				{
+					this._MaPhieuMuon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayMuon", DbType="DateTime NOT NULL")]
+		public System.DateTime NgayMuon
+		{
+			get
+			{
+				return this._NgayMuon;
+			}
+			set
+			{
+				if ((this._NgayMuon != value))
+				{
+					this._NgayMuon = value;
 				}
 			}
 		}

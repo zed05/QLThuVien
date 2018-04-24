@@ -56,7 +56,6 @@ namespace QLThuVien
         public void add(LoaiSachFrm f)
         {
             LOAI ls = new LOAI();
-            ls.MaLoai = int.Parse(f.maLoaiTxt.Text);
             ls.TenLoai = f.tenLoaiTxt.Text;
 
             db.database().LOAIs.InsertOnSubmit(ls);

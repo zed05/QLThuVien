@@ -305,6 +305,7 @@
             this.phieuMuonSachFrmBtn.TabIndex = 1;
             this.phieuMuonSachFrmBtn.TabStop = false;
             this.phieuMuonSachFrmBtn.Text = "PHIẾU MƯỢN SÁCH";
+            this.phieuMuonSachFrmBtn.Click += new System.EventHandler(this.phieuMuonSachFrmBtn_Click);
             // 
             // phieuThuTienFrmBtn
             // 

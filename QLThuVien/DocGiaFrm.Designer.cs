@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.DocGiaFrmBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.nhanVienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.phieuMuonSachFrmBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.phieuThuTienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.menuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.DocGiaFrmBtnDis = new DevExpress.XtraEditors.SimpleButton();
@@ -92,8 +92,8 @@
             // panelControl2
             // 
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.panelControl2.Controls.Add(this.DocGiaFrmBtn);
-            this.panelControl2.Controls.Add(this.nhanVienFrmBtn);
+            this.panelControl2.Controls.Add(this.phieuMuonSachFrmBtn);
+            this.panelControl2.Controls.Add(this.phieuThuTienFrmBtn);
             this.panelControl2.Controls.Add(this.menuBtn);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(0, 138);
@@ -101,71 +101,73 @@
             this.panelControl2.Size = new System.Drawing.Size(234, 959);
             this.panelControl2.TabIndex = 11;
             // 
-            // DocGiaFrmBtn
+            // phieuMuonSachFrmBtn
             // 
-            this.DocGiaFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.phieuMuonSachFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DocGiaFrmBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocGiaFrmBtn.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DocGiaFrmBtn.Appearance.Options.UseFont = true;
-            this.DocGiaFrmBtn.Appearance.Options.UseForeColor = true;
-            this.DocGiaFrmBtn.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.DocGiaFrmBtn.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocGiaFrmBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DocGiaFrmBtn.AppearanceHovered.Options.UseBackColor = true;
-            this.DocGiaFrmBtn.AppearanceHovered.Options.UseFont = true;
-            this.DocGiaFrmBtn.AppearanceHovered.Options.UseForeColor = true;
-            this.DocGiaFrmBtn.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.DocGiaFrmBtn.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocGiaFrmBtn.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DocGiaFrmBtn.AppearancePressed.Options.UseBackColor = true;
-            this.DocGiaFrmBtn.AppearancePressed.Options.UseFont = true;
-            this.DocGiaFrmBtn.AppearancePressed.Options.UseForeColor = true;
-            this.DocGiaFrmBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.DocGiaFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DocGiaFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_name_tag_64;
-            this.DocGiaFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.DocGiaFrmBtn.Location = new System.Drawing.Point(2, 227);
-            this.DocGiaFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.DocGiaFrmBtn.Name = "DocGiaFrmBtn";
-            this.DocGiaFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.DocGiaFrmBtn.Size = new System.Drawing.Size(230, 147);
-            this.DocGiaFrmBtn.TabIndex = 2;
-            this.DocGiaFrmBtn.TabStop = false;
-            this.DocGiaFrmBtn.Text = "ĐỌC GIẢ";
+            this.phieuMuonSachFrmBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuMuonSachFrmBtn.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.phieuMuonSachFrmBtn.Appearance.Options.UseFont = true;
+            this.phieuMuonSachFrmBtn.Appearance.Options.UseForeColor = true;
+            this.phieuMuonSachFrmBtn.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.phieuMuonSachFrmBtn.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuMuonSachFrmBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.phieuMuonSachFrmBtn.AppearanceHovered.Options.UseBackColor = true;
+            this.phieuMuonSachFrmBtn.AppearanceHovered.Options.UseFont = true;
+            this.phieuMuonSachFrmBtn.AppearanceHovered.Options.UseForeColor = true;
+            this.phieuMuonSachFrmBtn.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.phieuMuonSachFrmBtn.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuMuonSachFrmBtn.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.phieuMuonSachFrmBtn.AppearancePressed.Options.UseBackColor = true;
+            this.phieuMuonSachFrmBtn.AppearancePressed.Options.UseFont = true;
+            this.phieuMuonSachFrmBtn.AppearancePressed.Options.UseForeColor = true;
+            this.phieuMuonSachFrmBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.phieuMuonSachFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.phieuMuonSachFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_bulleted_list_64;
+            this.phieuMuonSachFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.phieuMuonSachFrmBtn.Location = new System.Drawing.Point(2, 227);
+            this.phieuMuonSachFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.phieuMuonSachFrmBtn.Name = "phieuMuonSachFrmBtn";
+            this.phieuMuonSachFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.phieuMuonSachFrmBtn.Size = new System.Drawing.Size(230, 147);
+            this.phieuMuonSachFrmBtn.TabIndex = 2;
+            this.phieuMuonSachFrmBtn.TabStop = false;
+            this.phieuMuonSachFrmBtn.Text = "PHIẾU MƯỢN";
+            this.phieuMuonSachFrmBtn.Click += new System.EventHandler(this.phieuMuonSachFrmBtn_Click);
             // 
-            // nhanVienFrmBtn
+            // phieuThuTienFrmBtn
             // 
-            this.nhanVienFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.phieuThuTienFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nhanVienFrmBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhanVienFrmBtn.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.nhanVienFrmBtn.Appearance.Options.UseFont = true;
-            this.nhanVienFrmBtn.Appearance.Options.UseForeColor = true;
-            this.nhanVienFrmBtn.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.nhanVienFrmBtn.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhanVienFrmBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.nhanVienFrmBtn.AppearanceHovered.Options.UseBackColor = true;
-            this.nhanVienFrmBtn.AppearanceHovered.Options.UseFont = true;
-            this.nhanVienFrmBtn.AppearanceHovered.Options.UseForeColor = true;
-            this.nhanVienFrmBtn.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.nhanVienFrmBtn.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nhanVienFrmBtn.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.nhanVienFrmBtn.AppearancePressed.Options.UseBackColor = true;
-            this.nhanVienFrmBtn.AppearancePressed.Options.UseFont = true;
-            this.nhanVienFrmBtn.AppearancePressed.Options.UseForeColor = true;
-            this.nhanVienFrmBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.nhanVienFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nhanVienFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_manager_64;
-            this.nhanVienFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.nhanVienFrmBtn.Location = new System.Drawing.Point(2, 49);
-            this.nhanVienFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.nhanVienFrmBtn.Name = "nhanVienFrmBtn";
-            this.nhanVienFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.nhanVienFrmBtn.Size = new System.Drawing.Size(230, 147);
-            this.nhanVienFrmBtn.TabIndex = 1;
-            this.nhanVienFrmBtn.TabStop = false;
-            this.nhanVienFrmBtn.Text = "NHÂN VIÊN";
+            this.phieuThuTienFrmBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuThuTienFrmBtn.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.phieuThuTienFrmBtn.Appearance.Options.UseFont = true;
+            this.phieuThuTienFrmBtn.Appearance.Options.UseForeColor = true;
+            this.phieuThuTienFrmBtn.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
+            this.phieuThuTienFrmBtn.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuThuTienFrmBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseBackColor = true;
+            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseFont = true;
+            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseForeColor = true;
+            this.phieuThuTienFrmBtn.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.phieuThuTienFrmBtn.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phieuThuTienFrmBtn.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseBackColor = true;
+            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseFont = true;
+            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseForeColor = true;
+            this.phieuThuTienFrmBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.phieuThuTienFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.phieuThuTienFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_purchase_order_64;
+            this.phieuThuTienFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.phieuThuTienFrmBtn.Location = new System.Drawing.Point(2, 49);
+            this.phieuThuTienFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.phieuThuTienFrmBtn.Name = "phieuThuTienFrmBtn";
+            this.phieuThuTienFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.phieuThuTienFrmBtn.Size = new System.Drawing.Size(230, 147);
+            this.phieuThuTienFrmBtn.TabIndex = 1;
+            this.phieuThuTienFrmBtn.TabStop = false;
+            this.phieuThuTienFrmBtn.Text = "PHIẾU THU";
+            this.phieuThuTienFrmBtn.Click += new System.EventHandler(this.phieuThuTienFrmBtn_Click);
             // 
             // menuBtn
             // 
@@ -647,8 +649,8 @@
         #endregion
         public DevExpress.XtraEditors.SimpleButton DocGiaFrmBtnDis;
         public DevExpress.XtraEditors.PanelControl panelControl2;
-        public DevExpress.XtraEditors.SimpleButton DocGiaFrmBtn;
-        public DevExpress.XtraEditors.SimpleButton nhanVienFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton phieuMuonSachFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton phieuThuTienFrmBtn;
         public DevExpress.XtraEditors.SimpleButton menuBtn;
         public DevExpress.XtraEditors.PanelControl panelControl1;
         public DevExpress.XtraEditors.PanelControl panelControl3;

@@ -95,5 +95,19 @@ namespace QLThuVien
             dg.setButton(this, true);
             dg.loadRowSelected(this);
         }
+
+        private void phieuThuTienFrmBtn_Click(object sender, EventArgs e)
+        {
+            PhieuThuTienFrm f = new PhieuThuTienFrm();
+            f.Show();
+            this.Close();
+        }
+
+        private void phieuMuonSachFrmBtn_Click(object sender, EventArgs e)
+        {
+            PhieuMuonSachFrm f = new PhieuMuonSachFrm();
+            f.Show();
+            this.Close();
+        }
     }
 }

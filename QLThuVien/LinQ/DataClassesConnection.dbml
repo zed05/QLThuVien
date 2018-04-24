@@ -67,6 +67,7 @@
       <Column Name="DienThoai" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
       <Column Name="MaCV" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NHANVIEN_LOGIN" Member="LOGINs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="LOGIN" />
+      <Association Name="NHANVIEN_PHIEUMUONSACH" Member="PHIEUMUONSACHes" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHIEUMUONSACH" />
       <Association Name="NHANVIEN_PHIEUTHUTIEN" Member="PHIEUTHUTIENs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHIEUTHUTIEN" />
       <Association Name="CHUCVU_NHANVIEN" Member="CHUCVU" ThisKey="MaCV" OtherKey="MaCV" Type="CHUCVU" IsForeignKey="true" />
     </Type>
@@ -76,7 +77,9 @@
       <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="NgayMuon" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="PHIEUMUONSACH_CHITIETPHIEUMUON" Member="CHITIETPHIEUMUONs" ThisKey="MaPhieuMuon" OtherKey="MaPhieuMuon" Type="CHITIETPHIEUMUON" />
+      <Association Name="NHANVIEN_PHIEUMUONSACH" Member="NHANVIEN" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="NHANVIEN" IsForeignKey="true" />
       <Association Name="DOCGIA_PHIEUMUONSACH" Member="DOCGIA" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="DOCGIA" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
@@ -138,6 +141,16 @@
       <Column Name="MaPhieuThuTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="SoTienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Column Name="SoTienThu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PHIEUMUON_PROC" Method="PHIEUMUON_PROC">
+    <ElementType Name="PHIEUMUON_PROCResult">
+      <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayMuon" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />

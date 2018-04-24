@@ -81,7 +81,6 @@ namespace QLThuVien
         public void add(NhanVienFrm f)
         {
             NHANVIEN nv = new NHANVIEN();
-            nv.MaNhanVien = int.Parse(f.maNVTxt.Text);
             nv.HoTenNhanVien = f.tenNVTxt.Text;
             nv.NgaySinh = Convert.ToDateTime(f.ngaySinhDT.Text);
             nv.DiaChi = f.diaChiTxt.Text;

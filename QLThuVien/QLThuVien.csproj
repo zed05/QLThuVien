@@ -61,6 +61,7 @@
     <Compile Include="ClassDocGia.cs" />
     <Compile Include="ClassLoaiSach.cs" />
     <Compile Include="ClassNhanVien.cs" />
+    <Compile Include="ClassPhieuMuonSach.cs" />
     <Compile Include="ClassPhieuThuTien.cs" />
     <Compile Include="ClassSach.cs" />
     <Compile Include="DocGiaFrm.cs">
@@ -98,6 +99,12 @@
     <Compile Include="NhanVienFrm.Designer.cs">
       <DependentUpon>NhanVienFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhieuMuonSachFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhieuMuonSachFrm.Designer.cs">
+      <DependentUpon>PhieuMuonSachFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhieuThuTienFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVienFrm.resx">
       <DependentUpon>NhanVienFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuMuonSachFrm.resx">
+      <DependentUpon>PhieuMuonSachFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PhieuThuTienFrm.resx">
       <DependentUpon>PhieuThuTienFrm.cs</DependentUpon>

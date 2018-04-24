@@ -82,7 +82,6 @@ namespace QLThuVien
         public void add(SachFrm f)
         {
             SACH s = new SACH();
-            s.MaSach = int.Parse(f.maSachTxt.Text);
             s.TenSach = f.tenSachTxt.Text;
             s.TacGia = f.tacGiaTxt.Text;
             s.NamXuatBan = int.Parse(f.namXuatBanTxt.Text);

@@ -65,5 +65,12 @@ namespace QLThuVien
             f.Show();
             this.Hide();
         }
+
+        private void phieuMuonSachFrmBtn_Click(object sender, EventArgs e)
+        {
+            PhieuMuonSachFrm f = new PhieuMuonSachFrm();
+            f.Show();
+            this.Hide();
+        }
     }
 }

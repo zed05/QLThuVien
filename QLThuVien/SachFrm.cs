@@ -95,5 +95,11 @@ namespace QLThuVien
             s.loadRowSelected(this);
         }
 
+        private void loaiSachFrmBtn_Click(object sender, EventArgs e)
+        {
+            LoaiSachFrm f = new LoaiSachFrm();
+            f.Show();
+            this.Close();
+        }
     }
 }

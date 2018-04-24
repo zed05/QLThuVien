@@ -25,7 +25,7 @@ namespace QLThuVien
 
         public void loadDocGiaData(PhieuThuTienFrm f)
         {
-            var data = db.database().DOCGIAs.ToList();
+            var data = db.database().DOCGIA_PROC().ToList();
             f.tenDocGiaCb.DataSource = data;
             f.tenDocGiaCb.DisplayMember = "HoTenDocGia";
             f.tenDocGiaCb.ValueMember = "MaDocGia";
@@ -33,7 +33,7 @@ namespace QLThuVien
 
         public void loadNhanVienData(PhieuThuTienFrm f)
         {
-            var data = db.database().NHANVIENs.ToList();
+            var data = db.database().NHANVIEN_PROC().ToList();
             f.tenNhanVienCb.DataSource = data;
             f.tenNhanVienCb.DisplayMember = "HoTenNhanVien";
             f.tenNhanVienCb.ValueMember = "MaNhanVien";
@@ -87,7 +87,6 @@ namespace QLThuVien
         public void add(PhieuThuTienFrm f)
         {
             PHIEUTHUTIEN pt = new PHIEUTHUTIEN();
-            pt.MaPhieuThuTien= int.Parse(f.maPhieuThuTienTxt.Text);
             pt.SoTienNo = float.Parse(f.soTienNoTxt.Text);
             pt.SoTienThu = float.Parse(f.soTienThuTxt.Text);
             pt.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());

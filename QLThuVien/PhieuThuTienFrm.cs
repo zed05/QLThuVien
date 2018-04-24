@@ -54,6 +54,9 @@ namespace QLThuVien
             pt.setNull(this);
             pt.setButton(this, false);
             pt.enableObject(this, true);
+            //pt.loadNhanVienData(this);
+            //pt.loadDocGiaData(this);
+
         }
 
         private void suaBtn_Click(object sender, EventArgs e)
@@ -98,12 +101,26 @@ namespace QLThuVien
 
         private void tenDocGiaCb_MouseClick(object sender, MouseEventArgs e)
         {
-            pt.loadDocGiaData(this);
+            //pt.loadDocGiaData(this);
         }
 
         private void tenNhanVienCb_MouseClick(object sender, MouseEventArgs e)
         {
-            pt.loadNhanVienData(this);
+            //pt.loadNhanVienData(this);
+        }
+
+        private void docGiaFrmBtn_Click(object sender, EventArgs e)
+        {
+            DocGiaFrm f = new DocGiaFrm();
+            f.Show();
+            this.Close();
+        }
+
+        private void phieuMuonSachFrmBtn_Click(object sender, EventArgs e)
+        {
+            PhieuMuonSachFrm f = new PhieuMuonSachFrm();
+            f.Show();
+            this.Close();
         }
     }
 }
