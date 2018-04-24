@@ -100,5 +100,10 @@ namespace QLThuVien
             SachFrm f = new SachFrm();
             f.Show();
         }
+
+        private void exitMainFrmBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

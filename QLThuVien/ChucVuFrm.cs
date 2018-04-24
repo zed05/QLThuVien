@@ -101,5 +101,17 @@ namespace QLThuVien
                 cv.enableObject(this, false);
             }
         }
+
+        private void thongTinDangNhapFrmBtn_Click(object sender, EventArgs e)
+        {
+            ThongTinDangNhapFrm f = new ThongTinDangNhapFrm();
+            f.Show();
+            this.Close();
+        }
+
+        private void exitFrmBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

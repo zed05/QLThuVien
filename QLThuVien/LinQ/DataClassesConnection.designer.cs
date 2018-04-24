@@ -209,6 +209,13 @@ namespace QLThuVien.LinQ
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<CHUCVU_PROCResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.LOGIN_PROC")]
+		public ISingleResult<LOGIN_PROCResult> LOGIN_PROC()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<LOGIN_PROCResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CHITIETPHIEUMUON")]
@@ -2941,6 +2948,104 @@ namespace QLThuVien.LinQ
 				if ((this._MoTa != value))
 				{
 					this._MoTa = value;
+				}
+			}
+		}
+	}
+	
+	public partial class LOGIN_PROCResult
+	{
+		
+		private string _IDLOGIN;
+		
+		private string _PWD;
+		
+		private string _GhiChu;
+		
+		private System.Nullable<int> _MaNhanVien;
+		
+		private string _HoTenNhanVien;
+		
+		public LOGIN_PROCResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDLOGIN", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string IDLOGIN
+		{
+			get
+			{
+				return this._IDLOGIN;
+			}
+			set
+			{
+				if ((this._IDLOGIN != value))
+				{
+					this._IDLOGIN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PWD", DbType="VarChar(200)")]
+		public string PWD
+		{
+			get
+			{
+				return this._PWD;
+			}
+			set
+			{
+				if ((this._PWD != value))
+				{
+					this._PWD = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(200)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this._GhiChu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="Int")]
+		public System.Nullable<int> MaNhanVien
+		{
+			get
+			{
+				return this._MaNhanVien;
+			}
+			set
+			{
+				if ((this._MaNhanVien != value))
+				{
+					this._MaNhanVien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoTenNhanVien", DbType="NVarChar(50)")]
+		public string HoTenNhanVien
+		{
+			get
+			{
+				return this._HoTenNhanVien;
+			}
+			set
+			{
+				if ((this._HoTenNhanVien != value))
+				{
+					this._HoTenNhanVien = value;
 				}
 			}
 		}

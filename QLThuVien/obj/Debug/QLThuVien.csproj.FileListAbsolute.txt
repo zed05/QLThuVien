@@ -109,3 +109,4 @@ E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.pdb
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.PhieuThuTienFrm.resources
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.PhieuMuonSachFrm.resources
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.ChucVuFrm.resources
+E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.ThongTinDangNhapFrm.resources

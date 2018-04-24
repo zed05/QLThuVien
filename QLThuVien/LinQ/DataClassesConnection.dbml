@@ -164,4 +164,13 @@
       <Column Name="MoTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.LOGIN_PROC" Method="LOGIN_PROC">
+    <ElementType Name="LOGIN_PROCResult">
+      <Column Name="IDLOGIN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PWD" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

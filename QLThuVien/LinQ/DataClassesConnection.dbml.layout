@@ -70,7 +70,7 @@
         <classShapeMoniker Id="6c9fbd21-0e8f-45f6-857b-4ae336092bd0" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 4.53929768880208); (5.79166666666667 : 4.53929768880208 : JumpStart); (5.95833333333333 : 4.53929768880208 : JumpEnd); (6.25 : 4.53929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 4.53929768880208); (6.25 : 4.53929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesConnectionDataContext/NHANVIEN/NHANVIEN_LOGIN" />
       <nodes>
         <classShapeMoniker Id="2f3712b9-8d5a-4489-bc67-f6f649a1284c" />
@@ -105,7 +105,7 @@
         <classShapeMoniker Id="e2af6c37-bce8-4488-9996-71c80dfcce85" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 5.40128098993389); (5.81607443490112 : 5.71735542483501 : JumpStart); (5.93392556509888 : 5.83520655503277 : JumpEnd); (6.0625 : 5.96378098993389); (6.0625 : 7.51044840494792); (6.25 : 7.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(5.5 : 5.40128098993389); (6.0625 : 5.96378098993389); (6.0625 : 7.51044840494792); (6.25 : 7.51044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesConnectionDataContext/NHANVIEN/NHANVIEN_PHIEUTHUTIEN" />
       <nodes>
         <classShapeMoniker Id="2f3712b9-8d5a-4489-bc67-f6f649a1284c" />

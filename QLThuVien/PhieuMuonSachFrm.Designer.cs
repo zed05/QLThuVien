@@ -54,6 +54,7 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.menuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.exitMainFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.phieuMuonSachGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuMuonSachGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -478,11 +479,27 @@
             this.panelControl1.Size = new System.Drawing.Size(1925, 138);
             this.panelControl1.TabIndex = 18;
             // 
+            // exitMainFrmBtn
+            // 
+            this.exitMainFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitMainFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitMainFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_close_window_64;
+            this.exitMainFrmBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.exitMainFrmBtn.Location = new System.Drawing.Point(1850, 38);
+            this.exitMainFrmBtn.Name = "exitMainFrmBtn";
+            this.exitMainFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.exitMainFrmBtn.Size = new System.Drawing.Size(54, 55);
+            this.exitMainFrmBtn.TabIndex = 22;
+            this.exitMainFrmBtn.TabStop = false;
+            this.exitMainFrmBtn.Click += new System.EventHandler(this.exitMainFrmBtn_Click);
+            // 
             // PhieuMuonSachFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1925, 1097);
+            this.Controls.Add(this.exitMainFrmBtn);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
@@ -539,5 +556,6 @@
         public DevExpress.XtraEditors.SimpleButton menuBtn;
         public DevExpress.XtraEditors.PanelControl panelControl1;
         public DevExpress.XtraEditors.DateEdit ngayMuonDtp;
+        public DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;
     }
 }

@@ -51,6 +51,7 @@
             this.nhanVienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.menuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.exitFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.chucVuFrmBtnDis = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
@@ -348,6 +349,7 @@
             this.thongTinDangNhapFrmBtn.TabIndex = 2;
             this.thongTinDangNhapFrmBtn.TabStop = false;
             this.thongTinDangNhapFrmBtn.Text = "THÔNG TIN ĐĂNG NHẬP";
+            this.thongTinDangNhapFrmBtn.Click += new System.EventHandler(this.thongTinDangNhapFrmBtn_Click);
             // 
             // nhanVienFrmBtn
             // 
@@ -419,12 +421,28 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl1.Controls.Add(this.exitFrmBtn);
             this.panelControl1.Controls.Add(this.chucVuFrmBtnDis);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1925, 138);
             this.panelControl1.TabIndex = 22;
+            // 
+            // exitFrmBtn
+            // 
+            this.exitFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_close_window_64;
+            this.exitFrmBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.exitFrmBtn.Location = new System.Drawing.Point(1850, 38);
+            this.exitFrmBtn.Name = "exitFrmBtn";
+            this.exitFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.exitFrmBtn.Size = new System.Drawing.Size(54, 55);
+            this.exitFrmBtn.TabIndex = 13;
+            this.exitFrmBtn.TabStop = false;
+            this.exitFrmBtn.Click += new System.EventHandler(this.exitFrmBtn_Click);
             // 
             // chucVuFrmBtnDis
             // 
@@ -493,7 +511,6 @@
         public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraGrid.GridControl chucVuGridControl;
         public DevExpress.XtraGrid.Views.Grid.GridView chucVuGridView;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         public DevExpress.XtraEditors.PanelControl panelControl3;
         public DevExpress.XtraEditors.SimpleButton inBtn;
         public DevExpress.XtraEditors.SimpleButton kLuuBtn;
@@ -509,5 +526,7 @@
         public DevExpress.XtraEditors.SimpleButton chucVuFrmBtnDis;
         public DevExpress.XtraEditors.TextEdit moTaTxt;
         public DevExpress.XtraEditors.TextEdit tenChucVuTxt;
+        public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        public DevExpress.XtraEditors.SimpleButton exitFrmBtn;
     }
 }

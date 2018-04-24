@@ -97,11 +97,23 @@ namespace QLThuVien
             nv.enableObject(this, true);
         }
 
-        private void DocGiaFrmBtn_Click(object sender, EventArgs e)
+        private void chucVuFrmBtn_Click(object sender, EventArgs e)
         {
-            DocGiaFrm f = new DocGiaFrm();
+            ChucVuFrm f = new ChucVuFrm();
             f.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void thongTinDangNhapFrmBtn_Click(object sender, EventArgs e)
+        {
+            ThongTinDangNhapFrm f = new ThongTinDangNhapFrm();
+            f.Show();
+            this.Close();
+        }
+
+        private void exitMainFrmBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

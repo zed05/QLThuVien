@@ -71,6 +71,7 @@
     <Compile Include="ClassPhieuMuonSach.cs" />
     <Compile Include="ClassPhieuThuTien.cs" />
     <Compile Include="ClassSach.cs" />
+    <Compile Include="ClassThongTinDangNhap.cs" />
     <Compile Include="DocGiaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +127,12 @@
     <Compile Include="SachFrm.Designer.cs">
       <DependentUpon>SachFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinDangNhapFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinDangNhapFrm.Designer.cs">
+      <DependentUpon>ThongTinDangNhapFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChucVuFrm.resx">
       <DependentUpon>ChucVuFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,6 +170,9 @@
     </Compile>
     <EmbeddedResource Include="SachFrm.resx">
       <DependentUpon>SachFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinDangNhapFrm.resx">
+      <DependentUpon>ThongTinDangNhapFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LinQ\DataClassesConnection.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>

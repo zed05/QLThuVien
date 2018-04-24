@@ -123,5 +123,10 @@ namespace QLThuVien
             f.Show();
             this.Close();
         }
+
+        private void exitMainFrmBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

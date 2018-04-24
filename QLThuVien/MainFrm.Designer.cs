@@ -31,21 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.exitMainFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.userNameLabel = new DevExpress.XtraEditors.LabelControl();
+            this.logOutBtn = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.thongTinDangNhapFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.chucVuFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.nhanVienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.loaiSachFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.sachFrmBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.phieuMuonSachFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.phieuThuTienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.docGiaFrmBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.exitMainFrmBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.logOutBtn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -81,6 +81,21 @@
             this.labelControl2.TabIndex = 13;
             this.labelControl2.Text = "CHƯƠNG TRÌNH QUẢN LÝ THƯ VIỆN";
             // 
+            // exitMainFrmBtn
+            // 
+            this.exitMainFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitMainFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitMainFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_close_window_64;
+            this.exitMainFrmBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.exitMainFrmBtn.Location = new System.Drawing.Point(1403, 20);
+            this.exitMainFrmBtn.Name = "exitMainFrmBtn";
+            this.exitMainFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.exitMainFrmBtn.Size = new System.Drawing.Size(54, 55);
+            this.exitMainFrmBtn.TabIndex = 12;
+            this.exitMainFrmBtn.TabStop = false;
+            this.exitMainFrmBtn.Click += new System.EventHandler(this.exitMainFrmBtn_Click);
+            // 
             // userNameLabel
             // 
             this.userNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -94,6 +109,22 @@
             this.userNameLabel.Size = new System.Drawing.Size(56, 24);
             this.userNameLabel.TabIndex = 11;
             this.userNameLabel.Text = "Admin";
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.logOutBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.ImageOptions.Image")));
+            this.logOutBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.logOutBtn.Location = new System.Drawing.Point(22, 42);
+            this.logOutBtn.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.logOutBtn.Size = new System.Drawing.Size(39, 31);
+            this.logOutBtn.TabIndex = 10;
+            this.logOutBtn.TabStop = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // panelControl2
             // 
@@ -117,27 +148,6 @@
             this.groupControl3.Size = new System.Drawing.Size(462, 421);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "QUẢN LÝ THÔNG TIN NHÂN VIÊN";
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.loaiSachFrmBtn);
-            this.groupControl2.Controls.Add(this.sachFrmBtn);
-            this.groupControl2.Location = new System.Drawing.Point(502, 11);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(462, 421);
-            this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "QUẢN LÝ SÁCH";
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.phieuMuonSachFrmBtn);
-            this.groupControl1.Controls.Add(this.phieuThuTienFrmBtn);
-            this.groupControl1.Controls.Add(this.docGiaFrmBtn);
-            this.groupControl1.Location = new System.Drawing.Point(22, 11);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(462, 421);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "QUẢN LÝ THÔNG TIN ĐỌC GIẢ";
             // 
             // thongTinDangNhapFrmBtn
             // 
@@ -208,6 +218,16 @@
             this.nhanVienFrmBtn.Text = "NHÂN VIÊN";
             this.nhanVienFrmBtn.Click += new System.EventHandler(this.nhanVienFrmBtn_Click);
             // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.loaiSachFrmBtn);
+            this.groupControl2.Controls.Add(this.sachFrmBtn);
+            this.groupControl2.Location = new System.Drawing.Point(502, 11);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(462, 421);
+            this.groupControl2.TabIndex = 1;
+            this.groupControl2.Text = "QUẢN LÝ SÁCH";
+            // 
             // loaiSachFrmBtn
             // 
             this.loaiSachFrmBtn.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
@@ -254,6 +274,17 @@
             this.sachFrmBtn.TabStop = false;
             this.sachFrmBtn.Text = "SÁCH";
             this.sachFrmBtn.Click += new System.EventHandler(this.sachFrmBtn_Click);
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.phieuMuonSachFrmBtn);
+            this.groupControl1.Controls.Add(this.phieuThuTienFrmBtn);
+            this.groupControl1.Controls.Add(this.docGiaFrmBtn);
+            this.groupControl1.Location = new System.Drawing.Point(22, 11);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(462, 421);
+            this.groupControl1.TabIndex = 0;
+            this.groupControl1.Text = "QUẢN LÝ THÔNG TIN ĐỌC GIẢ";
             // 
             // phieuMuonSachFrmBtn
             // 
@@ -326,35 +357,6 @@
             this.docGiaFrmBtn.Text = "ĐỌC GIẢ";
             this.docGiaFrmBtn.Click += new System.EventHandler(this.docGiaFrmBtn_Click);
             // 
-            // exitMainFrmBtn
-            // 
-            this.exitMainFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitMainFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_close_window_64;
-            this.exitMainFrmBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.exitMainFrmBtn.Location = new System.Drawing.Point(1403, 20);
-            this.exitMainFrmBtn.Name = "exitMainFrmBtn";
-            this.exitMainFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.exitMainFrmBtn.Size = new System.Drawing.Size(54, 55);
-            this.exitMainFrmBtn.TabIndex = 12;
-            this.exitMainFrmBtn.TabStop = false;
-            this.exitMainFrmBtn.Click += new System.EventHandler(this.exitMainFrmBtn_Click);
-            // 
-            // logOutBtn
-            // 
-            this.logOutBtn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.logOutBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logOutBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.ImageOptions.Image")));
-            this.logOutBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.logOutBtn.Location = new System.Drawing.Point(22, 42);
-            this.logOutBtn.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.logOutBtn.Size = new System.Drawing.Size(39, 31);
-            this.logOutBtn.TabIndex = 10;
-            this.logOutBtn.TabStop = false;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
-            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -397,7 +399,7 @@
         private DevExpress.XtraEditors.SimpleButton chucVuFrmBtn;
         private DevExpress.XtraEditors.SimpleButton nhanVienFrmBtn;
         private DevExpress.XtraEditors.SimpleButton thongTinDangNhapFrmBtn;
-        private DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        public DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;
     }
 }
