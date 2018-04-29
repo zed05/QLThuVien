@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using QLThuVien.LinQ;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace QLThuVien
 {
     class ClassPhieuThuTien
     {
         ClassConnection db;
+        public string mapt;
 
         public ClassPhieuThuTien()
         {
@@ -24,7 +26,13 @@ namespace QLThuVien
 
             f.phieuThuTienGridView.Columns[0].Caption = "Mã phiếu thu";
             f.phieuThuTienGridView.Columns[1].Caption = "Số tiền nợ";
+            f.phieuThuTienGridView.Columns[1].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            f.phieuThuTienGridView.Columns[1].DisplayFormat.FormatString = "C0";
+            f.phieuThuTienGridView.Columns[1].DisplayFormat.Format = CultureInfo.CreateSpecificCulture("vi-DVN");
             f.phieuThuTienGridView.Columns[2].Caption = "Số tiền thu";
+            f.phieuThuTienGridView.Columns[2].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            f.phieuThuTienGridView.Columns[2].DisplayFormat.FormatString = "C0";
+            f.phieuThuTienGridView.Columns[2].DisplayFormat.Format = CultureInfo.CreateSpecificCulture("vi-DVN");
             f.phieuThuTienGridView.Columns[3].Visible = false;
             f.phieuThuTienGridView.Columns[4].Visible = false;
             f.phieuThuTienGridView.Columns[5].Caption = "Tên đọc giả";
@@ -33,7 +41,7 @@ namespace QLThuVien
 
         public void loadDocGiaData(PhieuThuTienFrm f)
         {
-            var data = db.database().DOCGIA_PROC().ToList();
+            var data = db.database().DOCGIAs.ToList();
             f.tenDocGiaCb.DataSource = data;
             f.tenDocGiaCb.DisplayMember = "HoTenDocGia";
             f.tenDocGiaCb.ValueMember = "MaDocGia";
@@ -41,7 +49,7 @@ namespace QLThuVien
 
         public void loadNhanVienData(PhieuThuTienFrm f)
         {
-            var data = db.database().NHANVIEN_PROC().ToList();
+            var data = db.database().NHANVIENs.ToList();
             f.tenNhanVienCb.DataSource = data;
             f.tenNhanVienCb.DisplayMember = "HoTenNhanVien";
             f.tenNhanVienCb.ValueMember = "MaNhanVien";
@@ -49,11 +57,8 @@ namespace QLThuVien
 
         public void setNull(PhieuThuTienFrm f)
         {
-            f.maPhieuThuTienTxt.Text = "";
             f.soTienNoTxt.Text = "";
             f.soTienThuTxt.Text = "";
-            f.tenDocGiaCb.Text = "";
-            f.tenNhanVienCb.Text = "";
         }
 
         public void setButton(PhieuThuTienFrm f, bool val)
@@ -68,7 +73,6 @@ namespace QLThuVien
 
         public void enableObject(PhieuThuTienFrm f, bool val)
         {
-            f.maPhieuThuTienTxt.Enabled = false;
             f.soTienNoTxt.Enabled = val;
             f.soTienThuTxt.Enabled = val;
             f.tenDocGiaCb.Enabled = val;
@@ -85,7 +89,7 @@ namespace QLThuVien
         {
             int currentCell = f.phieuThuTienGridView.FocusedRowHandle;
 
-            f.maPhieuThuTienTxt.Text = f.phieuThuTienGridView.GetRowCellValue(currentCell, "MaPhieuThuTien").ToString();
+            mapt = f.phieuThuTienGridView.GetRowCellValue(currentCell, "MaPhieuThuTien").ToString();
             f.soTienNoTxt.Text = f.phieuThuTienGridView.GetRowCellValue(currentCell, "SoTienNo").ToString();
             f.soTienThuTxt.Text = f.phieuThuTienGridView.GetRowCellValue(currentCell, "SoTienThu").ToString();
             f.tenDocGiaCb.Text = f.phieuThuTienGridView.GetRowCellValue(currentCell, "HoTenDocGia").ToString();
@@ -95,32 +99,112 @@ namespace QLThuVien
         public void add(PhieuThuTienFrm f)
         {
             PHIEUTHUTIEN pt = new PHIEUTHUTIEN();
-            pt.SoTienNo = float.Parse(f.soTienNoTxt.Text);
-            pt.SoTienThu = float.Parse(f.soTienThuTxt.Text);
-            pt.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());
-            pt.MaNhanVien = int.Parse(f.tenNhanVienCb.SelectedValue.ToString());
 
-            db.database().PHIEUTHUTIENs.InsertOnSubmit(pt);
-            db.database().SubmitChanges();
-            loadAllData(f);
+            if(f.soTienNoTxt.Text == "" || f.soTienThuTxt.Text == "")
+            {
+                MessageBox.Show("Số tiền nợ và số tiền thu không được bỏ trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int k = 0;
+
+                foreach(var c in f.soTienNoTxt.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        k = 1;
+                    }
+                    else
+                    {
+                        k = 0;
+                    }
+                }
+                foreach(var c in f.soTienThuTxt.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        k = 1;
+                    }
+                    else
+                    {
+                        k = 0;
+                    }
+                }
+
+                if(k == 1)
+                {
+                    pt.SoTienNo = float.Parse(f.soTienNoTxt.Text);
+                    pt.SoTienThu = float.Parse(f.soTienThuTxt.Text);
+                    pt.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());
+                    pt.MaNhanVien = int.Parse(f.tenNhanVienCb.SelectedValue.ToString());
+
+                    db.database().PHIEUTHUTIENs.InsertOnSubmit(pt);
+                    db.database().SubmitChanges();
+                    loadAllData(f);
+                }
+                else
+                {
+                    MessageBox.Show("Số tiền nợ và số tiền thu không được nhập chữ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void edit(PhieuThuTienFrm f)
         {
-            var pt = db.database().PHIEUTHUTIENs.SingleOrDefault(a => a.MaPhieuThuTien == int.Parse(f.maPhieuThuTienTxt.Text));
-            pt.MaPhieuThuTien = int.Parse(f.maPhieuThuTienTxt.Text);
-            pt.SoTienNo = float.Parse(f.soTienNoTxt.Text);
-            pt.SoTienThu = float.Parse(f.soTienThuTxt.Text);
-            pt.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());
-            pt.MaNhanVien = int.Parse(f.tenNhanVienCb.SelectedValue.ToString());
+            
+            if (f.soTienNoTxt.Text == "" || f.soTienThuTxt.Text == "")
+            {
+                MessageBox.Show("Số tiền nợ và số tiền thu không được bỏ trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int k = 0;
+                int k2 = 0;
 
-            db.database().SubmitChanges();
-            loadAllData(f);
+                foreach (var c in f.soTienNoTxt.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        k = 1;
+                    }
+                    else
+                    {
+                        k = 0;
+                    }
+                }
+                foreach (var c in f.soTienThuTxt.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        k2 = 1;
+                    }
+                    else
+                    {
+                        k2 = 0;
+                    }
+                }
+
+                if (k == 1 && k2 == 1)
+                {
+                    var pt = db.database().PHIEUTHUTIENs.SingleOrDefault(a => a.MaPhieuThuTien == int.Parse(mapt));
+                    pt.SoTienNo = float.Parse(f.soTienNoTxt.Text);
+                    pt.SoTienThu = float.Parse(f.soTienThuTxt.Text);
+                    pt.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());
+                    pt.MaNhanVien = int.Parse(f.tenNhanVienCb.SelectedValue.ToString());
+
+                    db.database().SubmitChanges();
+                    loadAllData(f);
+                }
+                else
+                {
+                    MessageBox.Show("Số tiền nợ và số tiền thu không được nhập chữ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void delete(PhieuThuTienFrm f)
         {
-            var pt = db.database().PHIEUTHUTIENs.SingleOrDefault(a => a.MaPhieuThuTien == int.Parse(f.maPhieuThuTienTxt.Text));
+            var pt = db.database().PHIEUTHUTIENs.SingleOrDefault(a => a.MaPhieuThuTien == int.Parse(mapt));
             db.database().PHIEUTHUTIENs.DeleteOnSubmit(pt);
             db.database().SubmitChanges();
             loadAllData(f);

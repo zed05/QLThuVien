@@ -104,7 +104,7 @@
             this.userNameLabel.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
             this.userNameLabel.Appearance.Options.UseFont = true;
             this.userNameLabel.Appearance.Options.UseForeColor = true;
-            this.userNameLabel.Location = new System.Drawing.Point(24, 12);
+            this.userNameLabel.Location = new System.Drawing.Point(24, 18);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(56, 24);
             this.userNameLabel.TabIndex = 11;
@@ -117,13 +117,14 @@
             this.logOutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logOutBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.ImageOptions.Image")));
             this.logOutBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.logOutBtn.Location = new System.Drawing.Point(22, 42);
+            this.logOutBtn.Location = new System.Drawing.Point(22, 48);
             this.logOutBtn.LookAndFeel.UseDefaultLookAndFeel = false;
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.logOutBtn.Size = new System.Drawing.Size(39, 31);
             this.logOutBtn.TabIndex = 10;
             this.logOutBtn.TabStop = false;
+            this.logOutBtn.ToolTip = "Log out";
             this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // panelControl2
@@ -385,22 +386,22 @@
         }
 
         #endregion
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.LabelControl userNameLabel;
-        private DevExpress.XtraEditors.SimpleButton logOutBtn;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraEditors.SimpleButton docGiaFrmBtn;
-        private DevExpress.XtraEditors.SimpleButton phieuMuonSachFrmBtn;
-        private DevExpress.XtraEditors.SimpleButton phieuThuTienFrmBtn;
-        private DevExpress.XtraEditors.SimpleButton sachFrmBtn;
-        private DevExpress.XtraEditors.SimpleButton loaiSachFrmBtn;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.SimpleButton chucVuFrmBtn;
-        private DevExpress.XtraEditors.SimpleButton nhanVienFrmBtn;
-        private DevExpress.XtraEditors.SimpleButton thongTinDangNhapFrmBtn;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;
+        public DevExpress.XtraEditors.PanelControl panelControl1;
+        public DevExpress.XtraEditors.PanelControl panelControl2;
+        public DevExpress.XtraEditors.LabelControl userNameLabel;
+        public DevExpress.XtraEditors.SimpleButton logOutBtn;
+        public DevExpress.XtraEditors.GroupControl groupControl1;
+        public DevExpress.XtraEditors.GroupControl groupControl2;
+        public DevExpress.XtraEditors.SimpleButton docGiaFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton phieuMuonSachFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton phieuThuTienFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton sachFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton loaiSachFrmBtn;
+        public DevExpress.XtraEditors.GroupControl groupControl3;
+        public DevExpress.XtraEditors.SimpleButton chucVuFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton nhanVienFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton thongTinDangNhapFrmBtn;
+        public DevExpress.XtraEditors.LabelControl labelControl2;
     }
 }

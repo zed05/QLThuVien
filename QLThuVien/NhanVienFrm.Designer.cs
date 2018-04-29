@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.exitFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.nhanVienFrmBtnDis = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.thongTinDangNhapFrmBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -53,11 +54,8 @@
             this.diaChiTxt = new DevExpress.XtraEditors.TextEdit();
             this.tenNVTxt = new DevExpress.XtraEditors.TextEdit();
             this.dienThoaiTxt = new DevExpress.XtraEditors.TextEdit();
-            this.maNVTxt = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.nhanVienGridControl = new DevExpress.XtraGrid.GridControl();
             this.nhanVienGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.exitMainFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -73,7 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenNVTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dienThoaiTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maNVTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridView)).BeginInit();
             this.SuspendLayout();
@@ -81,12 +78,28 @@
             // panelControl1
             // 
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl1.Controls.Add(this.exitFrmBtn);
             this.panelControl1.Controls.Add(this.nhanVienFrmBtnDis);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1925, 138);
             this.panelControl1.TabIndex = 1;
+            // 
+            // exitFrmBtn
+            // 
+            this.exitFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.exitFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_close_window_64;
+            this.exitFrmBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.exitFrmBtn.Location = new System.Drawing.Point(1850, 38);
+            this.exitFrmBtn.Name = "exitFrmBtn";
+            this.exitFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
+            this.exitFrmBtn.Size = new System.Drawing.Size(54, 55);
+            this.exitFrmBtn.TabIndex = 14;
+            this.exitFrmBtn.TabStop = false;
+            this.exitFrmBtn.Click += new System.EventHandler(this.exitFrmBtn_Click);
             // 
             // nhanVienFrmBtnDis
             // 
@@ -354,8 +367,6 @@
             this.panelControl5.Controls.Add(this.diaChiTxt);
             this.panelControl5.Controls.Add(this.tenNVTxt);
             this.panelControl5.Controls.Add(this.dienThoaiTxt);
-            this.panelControl5.Controls.Add(this.maNVTxt);
-            this.panelControl5.Controls.Add(this.labelControl1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(2, 526);
             this.panelControl5.Name = "panelControl5";
@@ -368,16 +379,16 @@
             this.chucVuCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chucVuCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chucVuCb.FormattingEnabled = true;
-            this.chucVuCb.Location = new System.Drawing.Point(1286, 202);
+            this.chucVuCb.Location = new System.Drawing.Point(629, 193);
             this.chucVuCb.Name = "chucVuCb";
-            this.chucVuCb.Size = new System.Drawing.Size(305, 32);
+            this.chucVuCb.Size = new System.Drawing.Size(368, 32);
             this.chucVuCb.Sorted = true;
             this.chucVuCb.TabIndex = 3;
             // 
             // ngaySinhDT
             // 
             this.ngaySinhDT.EditValue = new System.DateTime(2018, 4, 19, 19, 39, 12, 362);
-            this.ngaySinhDT.Location = new System.Drawing.Point(1286, 80);
+            this.ngaySinhDT.Location = new System.Drawing.Point(629, 82);
             this.ngaySinhDT.Name = "ngaySinhDT";
             this.ngaySinhDT.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.ngaySinhDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -388,14 +399,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ngaySinhDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ngaySinhDT.Size = new System.Drawing.Size(305, 30);
+            this.ngaySinhDT.Size = new System.Drawing.Size(368, 30);
             this.ngaySinhDT.TabIndex = 2;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(1286, 159);
+            this.labelControl6.Location = new System.Drawing.Point(629, 150);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(78, 24);
             this.labelControl6.TabIndex = 0;
@@ -405,7 +416,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(692, 159);
+            this.labelControl5.Location = new System.Drawing.Point(117, 150);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(99, 24);
             this.labelControl5.TabIndex = 0;
@@ -415,7 +426,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(129, 159);
+            this.labelControl4.Location = new System.Drawing.Point(1211, 39);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(68, 24);
             this.labelControl4.TabIndex = 0;
@@ -425,7 +436,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(1286, 38);
+            this.labelControl3.Location = new System.Drawing.Point(629, 40);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(94, 24);
             this.labelControl3.TabIndex = 0;
@@ -435,7 +446,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(692, 38);
+            this.labelControl2.Location = new System.Drawing.Point(117, 40);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(67, 24);
             this.labelControl2.TabIndex = 0;
@@ -443,7 +454,7 @@
             // 
             // diaChiTxt
             // 
-            this.diaChiTxt.Location = new System.Drawing.Point(129, 202);
+            this.diaChiTxt.Location = new System.Drawing.Point(1211, 82);
             this.diaChiTxt.Name = "diaChiTxt";
             this.diaChiTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.diaChiTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,7 +466,7 @@
             // 
             // tenNVTxt
             // 
-            this.tenNVTxt.Location = new System.Drawing.Point(692, 80);
+            this.tenNVTxt.Location = new System.Drawing.Point(117, 82);
             this.tenNVTxt.Name = "tenNVTxt";
             this.tenNVTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.tenNVTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,7 +478,7 @@
             // 
             // dienThoaiTxt
             // 
-            this.dienThoaiTxt.Location = new System.Drawing.Point(692, 202);
+            this.dienThoaiTxt.Location = new System.Drawing.Point(117, 193);
             this.dienThoaiTxt.Name = "dienThoaiTxt";
             this.dienThoaiTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.dienThoaiTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -476,28 +487,6 @@
             this.dienThoaiTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.dienThoaiTxt.Size = new System.Drawing.Size(368, 30);
             this.dienThoaiTxt.TabIndex = 1;
-            // 
-            // maNVTxt
-            // 
-            this.maNVTxt.Location = new System.Drawing.Point(129, 80);
-            this.maNVTxt.Name = "maNVTxt";
-            this.maNVTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.maNVTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maNVTxt.Properties.Appearance.Options.UseBorderColor = true;
-            this.maNVTxt.Properties.Appearance.Options.UseFont = true;
-            this.maNVTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.maNVTxt.Size = new System.Drawing.Size(368, 30);
-            this.maNVTxt.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(129, 38);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(126, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã nhân viên:";
             // 
             // nhanVienGridControl
             // 
@@ -533,29 +522,14 @@
             this.nhanVienGridView.OptionsBehavior.ReadOnly = true;
             this.nhanVienGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.nhanVienGridView.OptionsView.ShowGroupPanel = false;
+            this.nhanVienGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.nhanVienGridView_KeyUp);
             this.nhanVienGridView.Click += new System.EventHandler(this.nhanVienGridView_Click);
-            // 
-            // exitMainFrmBtn
-            // 
-            this.exitMainFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.exitMainFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitMainFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_close_window_64;
-            this.exitMainFrmBtn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.exitMainFrmBtn.Location = new System.Drawing.Point(1850, 38);
-            this.exitMainFrmBtn.Name = "exitMainFrmBtn";
-            this.exitMainFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.exitMainFrmBtn.Size = new System.Drawing.Size(54, 55);
-            this.exitMainFrmBtn.TabIndex = 23;
-            this.exitMainFrmBtn.TabStop = false;
-            this.exitMainFrmBtn.Click += new System.EventHandler(this.exitMainFrmBtn_Click);
             // 
             // NhanVienFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1925, 1097);
-            this.Controls.Add(this.exitMainFrmBtn);
             this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl2);
@@ -581,7 +555,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenNVTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dienThoaiTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maNVTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridView)).EndInit();
             this.ResumeLayout(false);
@@ -611,14 +584,12 @@
         public DevExpress.XtraEditors.TextEdit diaChiTxt;
         public DevExpress.XtraEditors.TextEdit dienThoaiTxt;
         public DevExpress.XtraEditors.PanelControl panelControl5;
-        public DevExpress.XtraEditors.LabelControl labelControl1;
-        public DevExpress.XtraEditors.TextEdit maNVTxt;
         public DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.LabelControl labelControl3;
         public DevExpress.XtraEditors.TextEdit tenNVTxt;
         public DevExpress.XtraEditors.SimpleButton kLuuBtn;
         public DevExpress.XtraEditors.SimpleButton luuBtn;
         public System.Windows.Forms.ComboBox chucVuCb;
-        public DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;
+        public DevExpress.XtraEditors.SimpleButton exitFrmBtn;
     }
 }

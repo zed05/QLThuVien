@@ -106,5 +106,32 @@ namespace QLThuVien
         {
             Application.Exit();
         }
+
+        private void thongTinDangNhapGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                dn.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    dn.enableObject(this, false);
+                    dn.setButton(this, true);
+                    dn.loadRowSelected(this);
+                }
+            }
+        }
+
+        private void thongTinDangNhapGridView_Click(object sender, EventArgs e)
+        {
+            dn.loadRowSelected(this);
+            if (addBtn)
+            {
+                addBtn = false;
+                dn.setButton(this, true);
+                dn.enableObject(this, false);
+                dn.loadRowSelected(this);
+            }
+        }
     }
 }

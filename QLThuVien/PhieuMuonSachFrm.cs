@@ -29,6 +29,7 @@ namespace QLThuVien
             pm.loadRowSelected(this);
             pm.loadDocGiaData(this);
             pm.loadNhanVienData(this);
+            pm.loadMaSachData(this);
 
             loginName = id;
         }
@@ -71,7 +72,7 @@ namespace QLThuVien
         private void xoaBtn_Click(object sender, EventArgs e)
         {
             DialogResult result;
-            result = MessageBox.Show("Bạn có muốn xóa phiếu số \"" + maPhieuMuonSachTxt.Text + "\" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            result = MessageBox.Show("Bạn có muốn xóa phiếu số \"" + pm.mapm.ToString() + "\" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(result == DialogResult.Yes)
             {
                 pm.delete(this);
@@ -119,6 +120,21 @@ namespace QLThuVien
         private void exitMainFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void phieuMuonSachGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                pm.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    pm.enableObject(this, false);
+                    pm.setButton(this, true);
+                    pm.loadRowSelected(this);
+                }
+            }
         }
     }
 }

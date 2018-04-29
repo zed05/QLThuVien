@@ -34,7 +34,6 @@ namespace QLThuVien
             f.idTxt.Text = "";
             f.pwdTxt.Text = "";
             f.ghiChuTxt.Text = "";
-            f.tenNhanVienCb.Text = "";
         }
 
         public void setButton(ThongTinDangNhapFrm f, bool val)
@@ -44,12 +43,11 @@ namespace QLThuVien
             f.xoaBtn.Enabled = val;
             f.luuBtn.Enabled = !val;
             f.kLuuBtn.Enabled = !val;
-            f.inBtn.Enabled = val;
         }
 
         public void enableObject(ThongTinDangNhapFrm f, bool val)
         {
-            f.idTxt.Enabled = false;
+            f.idTxt.Enabled = val;
             f.pwdTxt.Enabled = val;
             f.ghiChuTxt.Enabled = val;
             f.tenNhanVienCb.Enabled = val;

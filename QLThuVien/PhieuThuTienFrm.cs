@@ -24,13 +24,18 @@ namespace QLThuVien
             InitializeComponent();
             pt = new ClassPhieuThuTien();
             pt.loadAllData(this);
+
             pt.loadDocGiaData(this);
             pt.loadNhanVienData(this);
+
             pt.setButton(this, true);
             pt.enableObject(this, false);
+
             pt.loadRowSelected(this);
 
             loginName = id;
+
+            
         }
 
         private void menuBtn_Click(object sender, EventArgs e)
@@ -58,9 +63,6 @@ namespace QLThuVien
             pt.setNull(this);
             pt.setButton(this, false);
             pt.enableObject(this, true);
-            //pt.loadNhanVienData(this);
-            //pt.loadDocGiaData(this);
-
         }
 
         private void suaBtn_Click(object sender, EventArgs e)
@@ -73,7 +75,7 @@ namespace QLThuVien
         private void xoaBtn_Click(object sender, EventArgs e)
         {
             DialogResult result;
-            result = MessageBox.Show("Bạn có muốn xóa phiếu thu số \"" + maPhieuThuTienTxt.Text + "\" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            result = MessageBox.Show("Bạn có muốn xóa phiếu thu số \"" + pt.mapt.ToString() + "\" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(result == DialogResult.Yes)
             {
                 pt.delete(this);
@@ -131,6 +133,21 @@ namespace QLThuVien
         private void exitMainFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void phieuThuTienGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                pt.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    pt.enableObject(this, false);
+                    pt.setButton(this, true);
+                    pt.loadRowSelected(this);
+                }
+            }
         }
     }
 }

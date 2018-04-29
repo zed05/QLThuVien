@@ -14,12 +14,20 @@ namespace QLThuVien
 {
     public partial class MainFrm : DevExpress.XtraEditors.XtraForm
     {
+        ClassMainFrm mainf;
+
         public string loginName;
         public MainFrm(string userID)
         {
             InitializeComponent();
+            mainf = new ClassMainFrm();
             userNameLabel.Text = userID;
             loginName = userID;
+
+            if(userNameLabel.Text != "")
+            {
+                mainf.checkPermission(this);
+            }
         }
 
         private void exitMainFrmBtn_Click(object sender, EventArgs e)

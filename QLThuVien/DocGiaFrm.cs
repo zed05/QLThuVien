@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace QLThuVien
 {
@@ -117,6 +118,21 @@ namespace QLThuVien
         private void exitMainFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void docGiaGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                dg.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    dg.enableObject(this, false);
+                    dg.setButton(this, true);
+                    dg.loadRowSelected(this);
+                }
+            }
         }
     }
 }

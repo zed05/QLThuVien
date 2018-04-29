@@ -12,6 +12,8 @@ namespace QLThuVien
     {
         ClassConnection db;
 
+        string macv;
+
         public ClassChucVu()
         {
             db = new ClassConnection();
@@ -29,7 +31,6 @@ namespace QLThuVien
 
         public void setNull(ChucVuFrm f)
         {
-            f.maChucVuTxt.Text = "";
             f.tenChucVuTxt.Text = "";
             f.moTaTxt.Text = "";
         }
@@ -41,12 +42,10 @@ namespace QLThuVien
             f.xoaBtn.Enabled = val;
             f.luuBtn.Enabled = !val;
             f.kLuuBtn.Enabled = !val;
-            f.inBtn.Enabled = val;
         }
 
         public void enableObject(ChucVuFrm f, bool val)
         {
-            f.maChucVuTxt.Enabled = false;
             f.tenChucVuTxt.Enabled = val;
             f.moTaTxt.Enabled = val;
         }
@@ -64,7 +63,7 @@ namespace QLThuVien
 
         public void edit(ChucVuFrm f)
         {
-            var cv = db.database().CHUCVUs.SingleOrDefault(a => a.MaCV == int.Parse(f.maChucVuTxt.Text));
+            var cv = db.database().CHUCVUs.SingleOrDefault(a => a.MaCV == int.Parse(macv));
             cv.TenCV = f.tenChucVuTxt.Text;
             cv.MoTa = f.moTaTxt.Text;
 
@@ -74,7 +73,7 @@ namespace QLThuVien
 
         public void delete(ChucVuFrm f)
         {
-            var cv = db.database().CHUCVUs.SingleOrDefault(a => a.MaCV == int.Parse(f.maChucVuTxt.Text));
+            var cv = db.database().CHUCVUs.SingleOrDefault(a => a.MaCV == int.Parse(macv));
             db.database().CHUCVUs.DeleteOnSubmit(cv);
             db.database().SubmitChanges();
             loadAllData(f);
@@ -84,7 +83,7 @@ namespace QLThuVien
         {
             int currentCell = f.chucVuGridView.FocusedRowHandle;
 
-            f.maChucVuTxt.Text = f.chucVuGridView.GetRowCellValue(currentCell, "MaCV").ToString();
+            macv = f.chucVuGridView.GetRowCellValue(currentCell, "MaCV").ToString();
             f.tenChucVuTxt.Text = f.chucVuGridView.GetRowCellValue(currentCell, "TenCV").ToString();
             f.moTaTxt.Text = f.chucVuGridView.GetRowCellValue(currentCell, "MoTa").ToString();
         }

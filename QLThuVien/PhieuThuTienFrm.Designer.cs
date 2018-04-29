@@ -36,11 +36,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.soTienNoTxt = new DevExpress.XtraEditors.TextEdit();
             this.soTienThuTxt = new DevExpress.XtraEditors.TextEdit();
-            this.maPhieuThuTienTxt = new DevExpress.XtraEditors.TextEdit();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.tenNhanVienCb = new System.Windows.Forms.ComboBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.inBtn = new DevExpress.XtraEditors.SimpleButton();
             this.kLuuBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -60,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.phieuThuTienGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soTienNoTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.soTienThuTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maPhieuThuTienTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -95,6 +92,7 @@
             this.phieuThuTienGridView.OptionsBehavior.ReadOnly = true;
             this.phieuThuTienGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.phieuThuTienGridView.OptionsView.ShowGroupPanel = false;
+            this.phieuThuTienGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.phieuThuTienGridView_KeyUp);
             this.phieuThuTienGridView.Click += new System.EventHandler(this.phieuThuTienGridView_Click);
             // 
             // phieuThuTienGridControl
@@ -115,9 +113,9 @@
             this.tenDocGiaCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tenDocGiaCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenDocGiaCb.FormattingEnabled = true;
-            this.tenDocGiaCb.Location = new System.Drawing.Point(129, 203);
+            this.tenDocGiaCb.Location = new System.Drawing.Point(294, 203);
             this.tenDocGiaCb.Name = "tenDocGiaCb";
-            this.tenDocGiaCb.Size = new System.Drawing.Size(305, 32);
+            this.tenDocGiaCb.Size = new System.Drawing.Size(368, 32);
             this.tenDocGiaCb.TabIndex = 3;
             this.tenDocGiaCb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tenDocGiaCb_MouseClick);
             // 
@@ -125,7 +123,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(129, 160);
+            this.labelControl6.Location = new System.Drawing.Point(294, 160);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(111, 24);
             this.labelControl6.TabIndex = 0;
@@ -135,7 +133,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(1286, 38);
+            this.labelControl3.Location = new System.Drawing.Point(1015, 43);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(104, 24);
             this.labelControl3.TabIndex = 0;
@@ -145,7 +143,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(692, 38);
+            this.labelControl2.Location = new System.Drawing.Point(294, 43);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(97, 24);
             this.labelControl2.TabIndex = 0;
@@ -153,7 +151,7 @@
             // 
             // soTienNoTxt
             // 
-            this.soTienNoTxt.Location = new System.Drawing.Point(692, 80);
+            this.soTienNoTxt.Location = new System.Drawing.Point(294, 85);
             this.soTienNoTxt.Name = "soTienNoTxt";
             this.soTienNoTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.soTienNoTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,7 +163,7 @@
             // 
             // soTienThuTxt
             // 
-            this.soTienThuTxt.Location = new System.Drawing.Point(1286, 68);
+            this.soTienThuTxt.Location = new System.Drawing.Point(1015, 85);
             this.soTienThuTxt.Name = "soTienThuTxt";
             this.soTienThuTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.soTienThuTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,18 +172,6 @@
             this.soTienThuTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.soTienThuTxt.Size = new System.Drawing.Size(368, 30);
             this.soTienThuTxt.TabIndex = 1;
-            // 
-            // maPhieuThuTienTxt
-            // 
-            this.maPhieuThuTienTxt.Location = new System.Drawing.Point(129, 80);
-            this.maPhieuThuTienTxt.Name = "maPhieuThuTienTxt";
-            this.maPhieuThuTienTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.maPhieuThuTienTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maPhieuThuTienTxt.Properties.Appearance.Options.UseBorderColor = true;
-            this.maPhieuThuTienTxt.Properties.Appearance.Options.UseFont = true;
-            this.maPhieuThuTienTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.maPhieuThuTienTxt.Size = new System.Drawing.Size(368, 30);
-            this.maPhieuThuTienTxt.TabIndex = 1;
             // 
             // panelControl5
             // 
@@ -198,8 +184,6 @@
             this.panelControl5.Controls.Add(this.labelControl2);
             this.panelControl5.Controls.Add(this.soTienNoTxt);
             this.panelControl5.Controls.Add(this.soTienThuTxt);
-            this.panelControl5.Controls.Add(this.maPhieuThuTienTxt);
-            this.panelControl5.Controls.Add(this.labelControl1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(2, 526);
             this.panelControl5.Name = "panelControl5";
@@ -212,9 +196,9 @@
             this.tenNhanVienCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tenNhanVienCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenNhanVienCb.FormattingEnabled = true;
-            this.tenNhanVienCb.Location = new System.Drawing.Point(692, 203);
+            this.tenNhanVienCb.Location = new System.Drawing.Point(1015, 203);
             this.tenNhanVienCb.Name = "tenNhanVienCb";
-            this.tenNhanVienCb.Size = new System.Drawing.Size(305, 32);
+            this.tenNhanVienCb.Size = new System.Drawing.Size(368, 32);
             this.tenNhanVienCb.TabIndex = 3;
             this.tenNhanVienCb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tenNhanVienCb_MouseClick);
             // 
@@ -222,21 +206,11 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(692, 160);
+            this.labelControl4.Location = new System.Drawing.Point(1015, 160);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(169, 24);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "Tên nhân viên thu:";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(129, 38);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(163, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã phiếu thu tiền:";
             // 
             // panelControl4
             // 
@@ -533,7 +507,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.phieuThuTienGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soTienNoTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.soTienThuTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maPhieuThuTienTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
@@ -559,9 +532,7 @@
         public DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.TextEdit soTienNoTxt;
         public DevExpress.XtraEditors.TextEdit soTienThuTxt;
-        public DevExpress.XtraEditors.TextEdit maPhieuThuTienTxt;
         public DevExpress.XtraEditors.PanelControl panelControl5;
-        public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.PanelControl panelControl4;
         public DevExpress.XtraEditors.SimpleButton inBtn;
         public DevExpress.XtraEditors.SimpleButton kLuuBtn;

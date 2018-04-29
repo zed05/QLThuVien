@@ -27,6 +27,8 @@ namespace QLThuVien
             cv.loadRowSelected(this);
             cv.setButton(this, true);
             cv.enableObject(this, false);
+
+            loginName = id;
         }
 
         private void menuBtn_Click(object sender, EventArgs e)
@@ -114,6 +116,21 @@ namespace QLThuVien
         private void exitFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void chucVuGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                cv.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    cv.enableObject(this, false);
+                    cv.setButton(this, true);
+                    cv.loadRowSelected(this);
+                }
+            }
         }
     }
 }

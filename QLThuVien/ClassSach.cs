@@ -12,6 +12,8 @@ namespace QLThuVien
     {
         ClassConnection db;
 
+        public string masach;
+
         public ClassSach()
         {
             db = new ClassConnection();
@@ -42,12 +44,10 @@ namespace QLThuVien
 
         public void setNull(SachFrm f)
         {
-            f.maSachTxt.Text = "";
             f.tenSachTxt.Text = "";
             f.tacGiaTxt.Text = "";
             f.namXuatBanTxt.Text = "";
             f.nhaXuatBanTxt.Text = "";
-            f.loaiSachCb.Text = "";
         }
 
         public void setButton(SachFrm f, bool val)
@@ -63,7 +63,6 @@ namespace QLThuVien
 
         public void enableObject(SachFrm f, bool val)
         {
-            f.maSachTxt.Enabled = false;
             f.tenSachTxt.Enabled = val;
             f.tacGiaTxt.Enabled = val;
             f.namXuatBanTxt.Enabled = val;
@@ -78,7 +77,7 @@ namespace QLThuVien
         public void loadRowSelected(SachFrm f)
         {
             int currentCell = f.sachGridView.FocusedRowHandle;
-            f.maSachTxt.Text = f.sachGridView.GetRowCellValue(currentCell, "MaSach").ToString();
+            masach = f.sachGridView.GetRowCellValue(currentCell, "MaSach").ToString();
             f.tenSachTxt.Text = f.sachGridView.GetRowCellValue(currentCell, "TenSach").ToString();
             f.tacGiaTxt.Text = f.sachGridView.GetRowCellValue(currentCell, "TacGia").ToString();
             f.namXuatBanTxt.Text = f.sachGridView.GetRowCellValue(currentCell, "NamXuatBan").ToString();
@@ -89,21 +88,55 @@ namespace QLThuVien
         public void add(SachFrm f)
         {
             SACH s = new SACH();
-            s.TenSach = f.tenSachTxt.Text;
-            s.TacGia = f.tacGiaTxt.Text;
-            s.NamXuatBan = int.Parse(f.namXuatBanTxt.Text);
-            s.NhaXuatBan = f.nhaXuatBanTxt.Text;
-            s.MaLoai = int.Parse(f.loaiSachCb.SelectedValue.ToString());
 
-            db.database().SACHes.InsertOnSubmit(s);
-            db.database().SubmitChanges();
-            loadAllData(f);
+            if(f.tenSachTxt.Text == "")
+            {
+                MessageBox.Show("Tên sách không được bỏ trống", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int k = 0;
+
+                if(f.namXuatBanTxt.Text == "")
+                {
+                    f.namXuatBanTxt.Text = "9999";
+                }
+
+                foreach(var c in f.namXuatBanTxt.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        k = 1;
+                    }
+                    else
+                    {
+                        k = 0;
+                    }
+                }
+
+                if(k == 1)
+                {
+                    s.TenSach = f.tenSachTxt.Text;
+                    s.TacGia = f.tacGiaTxt.Text;
+                    s.NamXuatBan = int.Parse(f.namXuatBanTxt.Text);
+                    s.NhaXuatBan = f.nhaXuatBanTxt.Text;
+                    s.MaLoai = int.Parse(f.loaiSachCb.SelectedValue.ToString());
+
+                    db.database().SACHes.InsertOnSubmit(s);
+                    db.database().SubmitChanges();
+                    loadAllData(f);
+                }
+                else
+                {
+                    MessageBox.Show("Năm xuất bản không được nhập chữ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void edit(SachFrm f)
         {
-            var s = db.database().SACHes.SingleOrDefault(a => a.MaSach == int.Parse(f.maSachTxt.Text));
-            s.MaSach = int.Parse(f.maSachTxt.Text);
+            var s = db.database().SACHes.SingleOrDefault(a => a.MaSach == int.Parse(masach));
+            s.MaSach = int.Parse(masach);
             s.TenSach = f.tenSachTxt.Text;
             s.TacGia = f.tacGiaTxt.Text;
             s.NamXuatBan = int.Parse(f.namXuatBanTxt.Text);
@@ -116,7 +149,7 @@ namespace QLThuVien
 
         public void delete(SachFrm f)
         {
-            var s = db.database().SACHes.SingleOrDefault(a => a.MaSach == int.Parse(f.maSachTxt.Text));
+            var s = db.database().SACHes.SingleOrDefault(a => a.MaSach == int.Parse(masach));
             db.database().SACHes.DeleteOnSubmit(s);
             db.database().SubmitChanges();
             loadAllData(f);

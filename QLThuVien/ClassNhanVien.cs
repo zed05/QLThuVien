@@ -12,6 +12,8 @@ namespace QLThuVien
     {
         ClassConnection db;
 
+        string manv;
+
         public ClassNhanVien()
         {
             db = new ClassConnection();
@@ -34,12 +36,10 @@ namespace QLThuVien
 
         public void setNull(NhanVienFrm f)
         {
-            f.maNVTxt.Text = "";
             f.tenNVTxt.Text = "";
             f.ngaySinhDT.EditValue = DateTime.Now;
             f.diaChiTxt.Text = "";
             f.dienThoaiTxt.Text = "";
-            f.chucVuCb.DisplayMember = "Nhân viên";
         }
 
         public void setButton(NhanVienFrm f, bool val)
@@ -54,7 +54,6 @@ namespace QLThuVien
 
         public void enableObject(NhanVienFrm f, bool val)
         {
-            f.maNVTxt.Enabled = false;
             f.tenNVTxt.Enabled = val;
             f.ngaySinhDT.Enabled = val;
             f.diaChiTxt.Enabled = val;
@@ -77,7 +76,7 @@ namespace QLThuVien
         public void loadRowSelected(NhanVienFrm f)
         {
             int currentCell = f.nhanVienGridView.FocusedRowHandle;
-            f.maNVTxt.Text = f.nhanVienGridView.GetRowCellValue(currentCell, "MaNhanVien").ToString();
+            manv = f.nhanVienGridView.GetRowCellValue(currentCell, "MaNhanVien").ToString();
             f.tenNVTxt.Text = f.nhanVienGridView.GetRowCellValue(currentCell, "HoTenNhanVien").ToString();
             f.ngaySinhDT.Text = f.nhanVienGridView.GetRowCellValue(currentCell, "NgaySinh").ToString();
             f.diaChiTxt.Text = f.nhanVienGridView.GetRowCellValue(currentCell, "DiaChi").ToString();
@@ -88,34 +87,89 @@ namespace QLThuVien
         public void add(NhanVienFrm f)
         {
             NHANVIEN nv = new NHANVIEN();
-            nv.HoTenNhanVien = f.tenNVTxt.Text;
-            nv.NgaySinh = Convert.ToDateTime(f.ngaySinhDT.Text);
-            nv.DiaChi = f.diaChiTxt.Text;
-            nv.DienThoai = f.dienThoaiTxt.Text;
-            nv.MaCV = int.Parse(f.chucVuCb.SelectedValue.ToString());
 
-            db.database().NHANVIENs.InsertOnSubmit(nv);
-            db.database().SubmitChanges();
-            loadAllData(f);
+            if(f.tenNVTxt.Text == "" || f.dienThoaiTxt.Text == "")
+            {
+                MessageBox.Show("Tên và điện thoại không được trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int k = 0;
+
+                foreach (var c in f.dienThoaiTxt.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        k = 1;
+                    }
+                    else
+                    {
+                        k = 0;
+                    }
+                }
+                if(k == 0)
+                {
+                    MessageBox.Show("Không được nhập kí tự ở mục Điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    nv.HoTenNhanVien = f.tenNVTxt.Text;
+                    nv.NgaySinh = Convert.ToDateTime(f.ngaySinhDT.Text);
+                    nv.DiaChi = f.diaChiTxt.Text;
+                    nv.DienThoai = f.dienThoaiTxt.Text;
+                    nv.MaCV = int.Parse(f.chucVuCb.SelectedValue.ToString());
+
+                    db.database().NHANVIENs.InsertOnSubmit(nv);
+                    db.database().SubmitChanges();
+                    loadAllData(f);
+                }
+            }
         }
 
         public void edit(NhanVienFrm f)
         {
-            var nv = db.database().NHANVIENs.SingleOrDefault(a => a.MaNhanVien == int.Parse(f.maNVTxt.Text));
-            nv.MaNhanVien = int.Parse(f.maNVTxt.Text);
-            nv.HoTenNhanVien = f.tenNVTxt.Text;
-            nv.NgaySinh = Convert.ToDateTime(f.ngaySinhDT.Text);
-            nv.DiaChi = f.diaChiTxt.Text;
-            nv.DienThoai = f.dienThoaiTxt.Text;
-            nv.MaCV = int.Parse(f.chucVuCb.SelectedValue.ToString());
+            if (f.tenNVTxt.Text == "" || f.dienThoaiTxt.Text == "")
+            {
+                MessageBox.Show("Tên và điện thoại không được trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                int k = 0;
 
-            db.database().SubmitChanges();
-            loadAllData(f);
+                foreach (var c in f.dienThoaiTxt.Text)
+                {
+                    if (Char.IsDigit(c))
+                    {
+                        k = 1;
+                    }
+                    else
+                    {
+                        k = 0;
+                    }
+                }
+                if(k == 0)
+                {
+                    MessageBox.Show("Không được nhập kí tự ở mục Điện thoại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    var nv = db.database().NHANVIENs.SingleOrDefault(a => a.MaNhanVien == int.Parse(manv));
+                    nv.MaNhanVien = int.Parse(manv);
+                    nv.HoTenNhanVien = f.tenNVTxt.Text;
+                    nv.NgaySinh = Convert.ToDateTime(f.ngaySinhDT.Text);
+                    nv.DiaChi = f.diaChiTxt.Text;
+                    nv.DienThoai = f.dienThoaiTxt.Text;
+                    nv.MaCV = int.Parse(f.chucVuCb.SelectedValue.ToString());
+
+                    db.database().SubmitChanges();
+                    loadAllData(f);
+                }
+            }
         }
 
         public void delete(NhanVienFrm f)
         {
-            var nv = db.database().NHANVIENs.SingleOrDefault(a => a.MaNhanVien == int.Parse(f.maNVTxt.Text));
+            var nv = db.database().NHANVIENs.SingleOrDefault(a => a.MaNhanVien == int.Parse(manv));
 
             db.database().NHANVIENs.DeleteOnSubmit(nv);
             db.database().SubmitChanges();

@@ -69,7 +69,7 @@ namespace QLThuVien
         private void xoaBtn_Click(object sender, EventArgs e)
         {
             DialogResult result;
-            result = MessageBox.Show("Bạn có muốn xóa cuốn \"" + tenSachTxt.Text + "\" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            result = MessageBox.Show("Bạn có muốn xóa cuốn \"" + s.masach.ToString() + "\" không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(result == DialogResult.Yes)
             {
                 s.delete(this);
@@ -110,6 +110,21 @@ namespace QLThuVien
         private void exitMainFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void sachGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                s.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    s.enableObject(this, false);
+                    s.setButton(this, true);
+                    s.loadRowSelected(this);
+                }
+            }
         }
     }
 }

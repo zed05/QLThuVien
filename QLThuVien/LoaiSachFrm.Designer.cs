@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
             this.inBtn = new DevExpress.XtraEditors.SimpleButton();
             this.kLuuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.luuBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -45,8 +45,6 @@
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.tenLoaiTxt = new DevExpress.XtraEditors.TextEdit();
-            this.maLoaiTxt = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.loaiSachGridControl = new DevExpress.XtraGrid.GridControl();
             this.loaiSachGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.exitMainFrmBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -61,7 +59,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tenLoaiTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maLoaiTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSachGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSachGridView)).BeginInit();
             this.SuspendLayout();
@@ -299,8 +296,6 @@
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panelControl5.Controls.Add(this.labelControl2);
             this.panelControl5.Controls.Add(this.tenLoaiTxt);
-            this.panelControl5.Controls.Add(this.maLoaiTxt);
-            this.panelControl5.Controls.Add(this.labelControl1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(2, 526);
             this.panelControl5.Name = "panelControl5";
@@ -311,7 +306,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(1028, 107);
+            this.labelControl2.Location = new System.Drawing.Point(579, 101);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(79, 24);
             this.labelControl2.TabIndex = 0;
@@ -319,7 +314,7 @@
             // 
             // tenLoaiTxt
             // 
-            this.tenLoaiTxt.Location = new System.Drawing.Point(1028, 149);
+            this.tenLoaiTxt.Location = new System.Drawing.Point(579, 143);
             this.tenLoaiTxt.Name = "tenLoaiTxt";
             this.tenLoaiTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.tenLoaiTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,28 +323,6 @@
             this.tenLoaiTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.tenLoaiTxt.Size = new System.Drawing.Size(368, 30);
             this.tenLoaiTxt.TabIndex = 1;
-            // 
-            // maLoaiTxt
-            // 
-            this.maLoaiTxt.Location = new System.Drawing.Point(328, 149);
-            this.maLoaiTxt.Name = "maLoaiTxt";
-            this.maLoaiTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.maLoaiTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maLoaiTxt.Properties.Appearance.Options.UseBorderColor = true;
-            this.maLoaiTxt.Properties.Appearance.Options.UseFont = true;
-            this.maLoaiTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.maLoaiTxt.Size = new System.Drawing.Size(368, 30);
-            this.maLoaiTxt.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(328, 107);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(71, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã loại:";
             // 
             // loaiSachGridControl
             // 
@@ -379,15 +352,16 @@
             this.loaiSachGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loaiSachGridView.AppearancePrint.EvenRow.Options.UseFont = true;
             this.loaiSachGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            gridFormatRule1.Name = "Format0";
-            gridFormatRule1.Rule = null;
-            this.loaiSachGridView.FormatRules.Add(gridFormatRule1);
+            gridFormatRule2.Name = "Format0";
+            gridFormatRule2.Rule = null;
+            this.loaiSachGridView.FormatRules.Add(gridFormatRule2);
             this.loaiSachGridView.GridControl = this.loaiSachGridControl;
             this.loaiSachGridView.Name = "loaiSachGridView";
             this.loaiSachGridView.OptionsBehavior.Editable = false;
             this.loaiSachGridView.OptionsBehavior.ReadOnly = true;
             this.loaiSachGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.loaiSachGridView.OptionsView.ShowGroupPanel = false;
+            this.loaiSachGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.loaiSachGridView_KeyUp);
             this.loaiSachGridView.Click += new System.EventHandler(this.loaiSachGridView_Click);
             // 
             // exitMainFrmBtn
@@ -430,7 +404,6 @@
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tenLoaiTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maLoaiTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSachGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiSachGridView)).EndInit();
             this.ResumeLayout(false);
@@ -455,8 +428,6 @@
         public DevExpress.XtraEditors.PanelControl panelControl5;
         public DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.TextEdit tenLoaiTxt;
-        public DevExpress.XtraEditors.TextEdit maLoaiTxt;
-        public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraGrid.GridControl loaiSachGridControl;
         public DevExpress.XtraGrid.Views.Grid.GridView loaiSachGridView;
         public DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;

@@ -52,8 +52,6 @@
             this.tacGiaTxt = new DevExpress.XtraEditors.TextEdit();
             this.tenSachTxt = new DevExpress.XtraEditors.TextEdit();
             this.nhaXuatBanTxt = new DevExpress.XtraEditors.TextEdit();
-            this.maSachTxt = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.sachGridControl = new DevExpress.XtraGrid.GridControl();
             this.sachGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.exitMainFrmBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -71,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tacGiaTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenSachTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaXuatBanTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maSachTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sachGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sachGridView)).BeginInit();
             this.SuspendLayout();
@@ -317,8 +314,6 @@
             this.panelControl5.Controls.Add(this.tacGiaTxt);
             this.panelControl5.Controls.Add(this.tenSachTxt);
             this.panelControl5.Controls.Add(this.nhaXuatBanTxt);
-            this.panelControl5.Controls.Add(this.maSachTxt);
-            this.panelControl5.Controls.Add(this.labelControl1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(2, 526);
             this.panelControl5.Name = "panelControl5";
@@ -331,17 +326,16 @@
             this.loaiSachCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loaiSachCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loaiSachCb.FormattingEnabled = true;
-            this.loaiSachCb.Location = new System.Drawing.Point(1250, 202);
+            this.loaiSachCb.Location = new System.Drawing.Point(687, 200);
             this.loaiSachCb.Name = "loaiSachCb";
             this.loaiSachCb.Size = new System.Drawing.Size(368, 32);
-            this.loaiSachCb.Sorted = true;
             this.loaiSachCb.TabIndex = 3;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(1250, 159);
+            this.labelControl6.Location = new System.Drawing.Point(687, 157);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(90, 24);
             this.labelControl6.TabIndex = 0;
@@ -351,7 +345,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(692, 159);
+            this.labelControl5.Location = new System.Drawing.Point(129, 157);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(126, 24);
             this.labelControl5.TabIndex = 0;
@@ -361,7 +355,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(129, 159);
+            this.labelControl4.Location = new System.Drawing.Point(1250, 38);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(132, 24);
             this.labelControl4.TabIndex = 0;
@@ -371,7 +365,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(1250, 38);
+            this.labelControl3.Location = new System.Drawing.Point(687, 39);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(72, 24);
             this.labelControl3.TabIndex = 0;
@@ -381,7 +375,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(692, 38);
+            this.labelControl2.Location = new System.Drawing.Point(129, 39);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(87, 24);
             this.labelControl2.TabIndex = 0;
@@ -389,7 +383,7 @@
             // 
             // namXuatBanTxt
             // 
-            this.namXuatBanTxt.Location = new System.Drawing.Point(129, 202);
+            this.namXuatBanTxt.Location = new System.Drawing.Point(1250, 81);
             this.namXuatBanTxt.Name = "namXuatBanTxt";
             this.namXuatBanTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.namXuatBanTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -401,7 +395,7 @@
             // 
             // tacGiaTxt
             // 
-            this.tacGiaTxt.Location = new System.Drawing.Point(1250, 80);
+            this.tacGiaTxt.Location = new System.Drawing.Point(687, 81);
             this.tacGiaTxt.Name = "tacGiaTxt";
             this.tacGiaTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.tacGiaTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,7 +407,7 @@
             // 
             // tenSachTxt
             // 
-            this.tenSachTxt.Location = new System.Drawing.Point(692, 80);
+            this.tenSachTxt.Location = new System.Drawing.Point(129, 81);
             this.tenSachTxt.Name = "tenSachTxt";
             this.tenSachTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.tenSachTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -425,7 +419,7 @@
             // 
             // nhaXuatBanTxt
             // 
-            this.nhaXuatBanTxt.Location = new System.Drawing.Point(692, 202);
+            this.nhaXuatBanTxt.Location = new System.Drawing.Point(129, 200);
             this.nhaXuatBanTxt.Name = "nhaXuatBanTxt";
             this.nhaXuatBanTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.nhaXuatBanTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -434,28 +428,6 @@
             this.nhaXuatBanTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.nhaXuatBanTxt.Size = new System.Drawing.Size(368, 30);
             this.nhaXuatBanTxt.TabIndex = 1;
-            // 
-            // maSachTxt
-            // 
-            this.maSachTxt.Location = new System.Drawing.Point(129, 80);
-            this.maSachTxt.Name = "maSachTxt";
-            this.maSachTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.maSachTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maSachTxt.Properties.Appearance.Options.UseBorderColor = true;
-            this.maSachTxt.Properties.Appearance.Options.UseFont = true;
-            this.maSachTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.maSachTxt.Size = new System.Drawing.Size(368, 30);
-            this.maSachTxt.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(129, 38);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã sách:";
             // 
             // sachGridControl
             // 
@@ -491,6 +463,7 @@
             this.sachGridView.OptionsBehavior.ReadOnly = true;
             this.sachGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.sachGridView.OptionsView.ShowGroupPanel = false;
+            this.sachGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.sachGridView_KeyUp);
             this.sachGridView.Click += new System.EventHandler(this.sachGridView_Click);
             // 
             // exitMainFrmBtn
@@ -536,7 +509,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tacGiaTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenSachTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhaXuatBanTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maSachTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sachGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sachGridView)).EndInit();
             this.ResumeLayout(false);
@@ -567,8 +539,6 @@
         public DevExpress.XtraEditors.TextEdit namXuatBanTxt;
         public DevExpress.XtraEditors.TextEdit tenSachTxt;
         public DevExpress.XtraEditors.TextEdit nhaXuatBanTxt;
-        public DevExpress.XtraEditors.TextEdit maSachTxt;
-        public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraGrid.GridControl sachGridControl;
         public DevExpress.XtraGrid.Views.Grid.GridView sachGridView;
         public DevExpress.XtraEditors.TextEdit tacGiaTxt;

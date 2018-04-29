@@ -11,6 +11,8 @@ namespace QLThuVien
     class ClassLoaiSach
     {
         ClassConnection db;
+
+        string maloai;
         
         public ClassLoaiSach()
         {
@@ -28,7 +30,6 @@ namespace QLThuVien
 
         public void setNull(LoaiSachFrm f)
         {
-            f.maLoaiTxt.Text = "";
             f.tenLoaiTxt.Text = "";
         }
 
@@ -42,9 +43,8 @@ namespace QLThuVien
             f.inBtn.Enabled = val;
         }
 
-        public void enableOnject(LoaiSachFrm f, bool val)
+        public void enableObject(LoaiSachFrm f, bool val)
         {
-            f.maLoaiTxt.Enabled = false;
             f.tenLoaiTxt.Enabled = val;
         }
 
@@ -52,33 +52,48 @@ namespace QLThuVien
         {
             int currentCell = f.loaiSachGridView.FocusedRowHandle;
 
-            f.maLoaiTxt.Text = f.loaiSachGridView.GetRowCellValue(currentCell, "MaLoai").ToString();
+            maloai = f.loaiSachGridView.GetRowCellValue(currentCell, "MaLoai").ToString();
             f.tenLoaiTxt.Text = f.loaiSachGridView.GetRowCellValue(currentCell, "TenLoai").ToString();
         }
 
         public void add(LoaiSachFrm f)
         {
             LOAI ls = new LOAI();
-            ls.TenLoai = f.tenLoaiTxt.Text;
 
-            db.database().LOAIs.InsertOnSubmit(ls);
-            db.database().SubmitChanges();
-            loadAllData(f);
+            if(f.tenLoaiTxt.Text == "")
+            {
+                MessageBox.Show("Tên loại không được trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                ls.TenLoai = f.tenLoaiTxt.Text;
+                db.database().LOAIs.InsertOnSubmit(ls);
+                db.database().SubmitChanges();
+                loadAllData(f);
+            }
+           
         }
 
         public void edit(LoaiSachFrm f)
         {
-            var ls = db.database().LOAIs.SingleOrDefault(a => a.MaLoai == int.Parse(f.maLoaiTxt.Text));
-            ls.MaLoai = int.Parse(f.maLoaiTxt.Text);
-            ls.TenLoai = f.tenLoaiTxt.Text;
+            if (f.tenLoaiTxt.Text == "")
+            {
+                MessageBox.Show("Tên loại không được trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var ls = db.database().LOAIs.SingleOrDefault(a => a.MaLoai == int.Parse(maloai));
+                ls.MaLoai = int.Parse(maloai);
+                ls.TenLoai = f.tenLoaiTxt.Text;
 
-            db.database().SubmitChanges();
-            loadAllData(f);
+                db.database().SubmitChanges();
+                loadAllData(f);
+            }
         }
 
         public void delete(LoaiSachFrm f)
         {
-            var ls = db.database().LOAIs.SingleOrDefault(a => a.MaLoai == int.Parse(f.maLoaiTxt.Text));
+            var ls = db.database().LOAIs.SingleOrDefault(a => a.MaLoai == int.Parse(maloai));
             db.database().LOAIs.DeleteOnSubmit(ls);
             db.database().SubmitChanges();
             loadAllData(f);

@@ -37,7 +37,6 @@
       <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="NgayLapThe" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="TienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
       <Association Name="DOCGIA_PHIEUMUONSACH" Member="PHIEUMUONSACHes" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="PHIEUMUONSACH" />
       <Association Name="DOCGIA_PHIEUTHUTIEN" Member="PHIEUTHUTIENs" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="PHIEUTHUTIEN" />
     </Type>
@@ -94,29 +93,38 @@
       <Association Name="DOCGIA_PHIEUTHUTIEN" Member="DOCGIA" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="DOCGIA" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.CHUCVU_PROC" Method="CHUCVU_PROC">
+    <ElementType Name="CHUCVU_PROCResult">
+      <Column Name="MaCV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.DOCGIA_PROC" Method="DOCGIA_PROC">
     <ElementType Name="DOCGIA_PROCResult">
-      <Column Name="MaDocGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
       <Column Name="NgayLapThe" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="TienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="MaPhieuThuTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TongTienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.SACH_PROC" Method="SACH_PROC">
-    <ElementType Name="SACH_PROCResult">
-      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenSach" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="TacGia" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NhaXuatBan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+  <Function Name="dbo.LOAISACH_PROC" Method="LOAISACH_PROC">
+    <ElementType Name="LOAISACH_PROCResult">
+      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LOGIN_PROC" Method="LOGIN_PROC">
+    <ElementType Name="LOGIN_PROCResult">
+      <Column Name="IDLOGIN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PWD" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.NHANVIEN_PROC" Method="NHANVIEN_PROC">
@@ -130,12 +138,6 @@
       <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.LOAISACH_PROC" Method="LOAISACH_PROC">
-    <ElementType Name="LOAISACH_PROCResult">
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.PHIEUTHU_PROC" Method="PHIEUTHU_PROC">
     <ElementType Name="PHIEUTHU_PROCResult">
       <Column Name="MaPhieuThuTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -147,6 +149,23 @@
       <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.LAST_DOCGIA_FUNC" Method="LAST_DOCGIA_FUNC" IsComposable="true">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SACH_PROC" Method="SACH_PROC">
+    <ElementType Name="SACH_PROCResult">
+      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenSach" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TacGia" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NhaXuatBan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="MaLoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LAST_PHIEUMUON_FUNC" Method="LAST_PHIEUMUON_FUNC" IsComposable="true">
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.PHIEUMUON_PROC" Method="PHIEUMUON_PROC">
     <ElementType Name="PHIEUMUON_PROCResult">
       <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -155,22 +174,8 @@
       <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.CHUCVU_PROC" Method="CHUCVU_PROC">
-    <ElementType Name="CHUCVU_PROCResult">
-      <Column Name="MaCV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MoTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.LOGIN_PROC" Method="LOGIN_PROC">
-    <ElementType Name="LOGIN_PROCResult">
-      <Column Name="IDLOGIN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="PWD" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenSach" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>

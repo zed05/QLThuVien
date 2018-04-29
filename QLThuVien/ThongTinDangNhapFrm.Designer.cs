@@ -48,7 +48,6 @@
             this.thongTinDangNhapGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.inBtn = new DevExpress.XtraEditors.SimpleButton();
             this.kLuuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.luuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.xoaBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -370,6 +369,8 @@
             this.thongTinDangNhapGridView.OptionsBehavior.ReadOnly = true;
             this.thongTinDangNhapGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.thongTinDangNhapGridView.OptionsView.ShowGroupPanel = false;
+            this.thongTinDangNhapGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.thongTinDangNhapGridView_KeyUp);
+            this.thongTinDangNhapGridView.Click += new System.EventHandler(this.thongTinDangNhapGridView_Click);
             // 
             // gridView1
             // 
@@ -379,7 +380,6 @@
             // panelControl3
             // 
             this.panelControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.panelControl3.Controls.Add(this.inBtn);
             this.panelControl3.Controls.Add(this.kLuuBtn);
             this.panelControl3.Controls.Add(this.luuBtn);
             this.panelControl3.Controls.Add(this.xoaBtn);
@@ -392,27 +392,13 @@
             this.panelControl3.Size = new System.Drawing.Size(1691, 149);
             this.panelControl3.TabIndex = 33;
             // 
-            // inBtn
-            // 
-            this.inBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inBtn.Appearance.Options.UseFont = true;
-            this.inBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_documents_64;
-            this.inBtn.Location = new System.Drawing.Point(1470, 26);
-            this.inBtn.Name = "inBtn";
-            this.inBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.inBtn.Size = new System.Drawing.Size(200, 85);
-            this.inBtn.TabIndex = 7;
-            this.inBtn.TabStop = false;
-            this.inBtn.Text = "IN";
-            // 
             // kLuuBtn
             // 
             this.kLuuBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kLuuBtn.Appearance.Options.UseFont = true;
             this.kLuuBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kLuuBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_delete_database_64;
-            this.kLuuBtn.Location = new System.Drawing.Point(1198, 26);
+            this.kLuuBtn.Location = new System.Drawing.Point(1342, 35);
             this.kLuuBtn.Name = "kLuuBtn";
             this.kLuuBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.kLuuBtn.Size = new System.Drawing.Size(200, 85);
@@ -427,7 +413,7 @@
             this.luuBtn.Appearance.Options.UseFont = true;
             this.luuBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.luuBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_add_database_64;
-            this.luuBtn.Location = new System.Drawing.Point(914, 26);
+            this.luuBtn.Location = new System.Drawing.Point(1058, 35);
             this.luuBtn.Name = "luuBtn";
             this.luuBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.luuBtn.Size = new System.Drawing.Size(200, 85);
@@ -442,7 +428,7 @@
             this.xoaBtn.Appearance.Options.UseFont = true;
             this.xoaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.xoaBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_trash_can_64;
-            this.xoaBtn.Location = new System.Drawing.Point(615, 26);
+            this.xoaBtn.Location = new System.Drawing.Point(759, 35);
             this.xoaBtn.Name = "xoaBtn";
             this.xoaBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.xoaBtn.Size = new System.Drawing.Size(200, 85);
@@ -457,7 +443,7 @@
             this.suaBtn.Appearance.Options.UseFont = true;
             this.suaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.suaBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_edit_64;
-            this.suaBtn.Location = new System.Drawing.Point(320, 26);
+            this.suaBtn.Location = new System.Drawing.Point(464, 35);
             this.suaBtn.Name = "suaBtn";
             this.suaBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.suaBtn.Size = new System.Drawing.Size(200, 85);
@@ -472,7 +458,7 @@
             this.themBtn.Appearance.Options.UseFont = true;
             this.themBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.themBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_plus_64;
-            this.themBtn.Location = new System.Drawing.Point(29, 26);
+            this.themBtn.Location = new System.Drawing.Point(173, 35);
             this.themBtn.Name = "themBtn";
             this.themBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.themBtn.Size = new System.Drawing.Size(200, 85);
@@ -544,7 +530,6 @@
         public DevExpress.XtraGrid.Views.Grid.GridView thongTinDangNhapGridView;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         public DevExpress.XtraEditors.PanelControl panelControl3;
-        public DevExpress.XtraEditors.SimpleButton inBtn;
         public DevExpress.XtraEditors.SimpleButton kLuuBtn;
         public DevExpress.XtraEditors.SimpleButton luuBtn;
         public DevExpress.XtraEditors.SimpleButton xoaBtn;

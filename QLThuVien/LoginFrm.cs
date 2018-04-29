@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLThuVien.LinQ;
+using System.Globalization;
 
 namespace QLThuVien
 {
@@ -38,13 +39,14 @@ namespace QLThuVien
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            string id = idLoginTxt.Text.Trim();
-            string pwd = passLoginTxt.Text.Trim();
+            //string id = idLoginTxt.Text.Trim();
+            //string pwd = passLoginTxt.Text;
 
-            //string id = "Admin";
-            //string pwd = "1";
+            string id = "Admin";
+            string pwd = "1";
 
-            var data = db.database().LOGINs.SingleOrDefault(a => a.IDLOGIN.Trim() == id && a.PWD.Trim() == pwd);
+
+            var data = db.database().LOGINs.SingleOrDefault(a => a.IDLOGIN.Trim() == id && a.PWD == pwd);
 
             if(data == null)
             {
@@ -56,7 +58,26 @@ namespace QLThuVien
                 MainFrm f = new MainFrm(id);
                 f.Show();
                 this.Hide();
+
+
             }
         }
+
+        private void passLoginTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                submitBtn_Click(sender, e);
+            }
+        }
+
+        private void idLoginTxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                submitBtn_Click(sender, e);
+            }
+        }
+
     }
 }

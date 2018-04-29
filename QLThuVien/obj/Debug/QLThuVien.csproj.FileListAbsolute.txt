@@ -109,3 +109,4 @@ E:\GitHub\QLThuVien\QLThuVien\bin\Debug\ru\DevExpress.Office.v17.1.Core.resource
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.csproj.CopyComplete
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.exe
 E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.pdb
+E:\GitHub\QLThuVien\QLThuVien\obj\Debug\QLThuVien.csprojResolveAssemblyReference.cache

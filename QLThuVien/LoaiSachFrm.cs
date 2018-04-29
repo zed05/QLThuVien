@@ -25,7 +25,7 @@ namespace QLThuVien
             ls = new ClassLoaiSach();
             ls.loadAllData(this);
             ls.setButton(this, true);
-            ls.enableOnject(this, false);
+            ls.enableObject(this, false);
             ls.loadRowSelected(this);
 
             loginName = id;
@@ -45,7 +45,7 @@ namespace QLThuVien
             {
                 addBtn = false;
                 ls.setButton(this, true);
-                ls.enableOnject(this, false);
+                ls.enableObject(this, false);
                 ls.loadRowSelected(this);
             }
         }
@@ -55,14 +55,14 @@ namespace QLThuVien
             addBtn = true;
             ls.setNull(this);
             ls.setButton(this, false);
-            ls.enableOnject(this, true);
+            ls.enableObject(this, true);
         }
 
         private void suaBtn_Click(object sender, EventArgs e)
         {
             addBtn = false;
             ls.setButton(this, false);
-            ls.enableOnject(this, true);
+            ls.enableObject(this, true);
         }
 
         private void xoaBtn_Click(object sender, EventArgs e)
@@ -87,14 +87,14 @@ namespace QLThuVien
                 ls.edit(this);
             }
             ls.setButton(this, true);
-            ls.enableOnject(this, false);
+            ls.enableObject(this, false);
             ls.loadRowSelected(this);
         }
 
         private void kLuuBtn_Click(object sender, EventArgs e)
         {
             ls.setButton(this, true);
-            ls.enableOnject(this, false);
+            ls.enableObject(this, false);
             ls.loadRowSelected(this);
         }
 
@@ -108,6 +108,21 @@ namespace QLThuVien
         private void exitMainFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void loaiSachGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                ls.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    ls.enableObject(this, false);
+                    ls.setButton(this, true);
+                    ls.loadRowSelected(this);
+                }
+            }
         }
     }
 }

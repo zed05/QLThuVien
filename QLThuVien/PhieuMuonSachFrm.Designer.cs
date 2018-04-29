@@ -45,10 +45,10 @@
             this.tenDocGiaCb = new System.Windows.Forms.ComboBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.maPhieuMuonSachTxt = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.ngayMuonDtp = new DevExpress.XtraEditors.DateEdit();
+            this.maSachCb = new System.Windows.Forms.ComboBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -58,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.phieuMuonSachGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuMuonSachGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maPhieuMuonSachTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ngayMuonDtp.Properties.CalendarTimeProperties)).BeginInit();
@@ -276,6 +275,7 @@
             this.phieuMuonSachGridView.OptionsBehavior.ReadOnly = true;
             this.phieuMuonSachGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.phieuMuonSachGridView.OptionsView.ShowGroupPanel = false;
+            this.phieuMuonSachGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.phieuMuonSachGridView_KeyUp);
             this.phieuMuonSachGridView.Click += new System.EventHandler(this.phieuMuonSachGridView_Click);
             // 
             // phieuMuonSachGridControl
@@ -302,7 +302,7 @@
             this.tenNhanVienCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tenNhanVienCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenNhanVienCb.FormattingEnabled = true;
-            this.tenNhanVienCb.Location = new System.Drawing.Point(1019, 203);
+            this.tenNhanVienCb.Location = new System.Drawing.Point(294, 203);
             this.tenNhanVienCb.Name = "tenNhanVienCb";
             this.tenNhanVienCb.Size = new System.Drawing.Size(368, 32);
             this.tenNhanVienCb.TabIndex = 3;
@@ -311,7 +311,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(1019, 160);
+            this.labelControl4.Location = new System.Drawing.Point(294, 160);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(222, 24);
             this.labelControl4.TabIndex = 0;
@@ -323,7 +323,7 @@
             this.tenDocGiaCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tenDocGiaCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenDocGiaCb.FormattingEnabled = true;
-            this.tenDocGiaCb.Location = new System.Drawing.Point(298, 203);
+            this.tenDocGiaCb.Location = new System.Drawing.Point(1015, 85);
             this.tenDocGiaCb.Name = "tenDocGiaCb";
             this.tenDocGiaCb.Size = new System.Drawing.Size(368, 32);
             this.tenDocGiaCb.TabIndex = 3;
@@ -332,7 +332,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(298, 160);
+            this.labelControl6.Location = new System.Drawing.Point(1015, 43);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(111, 24);
             this.labelControl6.TabIndex = 0;
@@ -342,45 +342,23 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(1019, 38);
+            this.labelControl2.Location = new System.Drawing.Point(294, 43);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(109, 24);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Ngày mượn:";
             // 
-            // maPhieuMuonSachTxt
-            // 
-            this.maPhieuMuonSachTxt.Location = new System.Drawing.Point(298, 80);
-            this.maPhieuMuonSachTxt.Name = "maPhieuMuonSachTxt";
-            this.maPhieuMuonSachTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.maPhieuMuonSachTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maPhieuMuonSachTxt.Properties.Appearance.Options.UseBorderColor = true;
-            this.maPhieuMuonSachTxt.Properties.Appearance.Options.UseFont = true;
-            this.maPhieuMuonSachTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.maPhieuMuonSachTxt.Size = new System.Drawing.Size(368, 30);
-            this.maPhieuMuonSachTxt.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(298, 38);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(191, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã phiếu mượn sách:";
-            // 
             // panelControl5
             // 
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panelControl5.Controls.Add(this.ngayMuonDtp);
+            this.panelControl5.Controls.Add(this.maSachCb);
+            this.panelControl5.Controls.Add(this.labelControl1);
             this.panelControl5.Controls.Add(this.tenNhanVienCb);
             this.panelControl5.Controls.Add(this.labelControl4);
             this.panelControl5.Controls.Add(this.tenDocGiaCb);
             this.panelControl5.Controls.Add(this.labelControl6);
             this.panelControl5.Controls.Add(this.labelControl2);
-            this.panelControl5.Controls.Add(this.maPhieuMuonSachTxt);
-            this.panelControl5.Controls.Add(this.labelControl1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(2, 526);
             this.panelControl5.Name = "panelControl5";
@@ -390,7 +368,7 @@
             // ngayMuonDtp
             // 
             this.ngayMuonDtp.EditValue = null;
-            this.ngayMuonDtp.Location = new System.Drawing.Point(1019, 80);
+            this.ngayMuonDtp.Location = new System.Drawing.Point(294, 85);
             this.ngayMuonDtp.Name = "ngayMuonDtp";
             this.ngayMuonDtp.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayMuonDtp.Properties.Appearance.Options.UseFont = true;
@@ -399,8 +377,29 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ngayMuonDtp.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ngayMuonDtp.Size = new System.Drawing.Size(377, 32);
+            this.ngayMuonDtp.Size = new System.Drawing.Size(368, 32);
             this.ngayMuonDtp.TabIndex = 4;
+            // 
+            // maSachCb
+            // 
+            this.maSachCb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.maSachCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maSachCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maSachCb.FormattingEnabled = true;
+            this.maSachCb.Location = new System.Drawing.Point(1015, 203);
+            this.maSachCb.Name = "maSachCb";
+            this.maSachCb.Size = new System.Drawing.Size(368, 32);
+            this.maSachCb.TabIndex = 3;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(1015, 160);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(79, 24);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Mã sách:";
             // 
             // panelControl4
             // 
@@ -515,7 +514,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.phieuMuonSachGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuMuonSachGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maPhieuMuonSachTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
@@ -552,8 +550,6 @@
         public System.Windows.Forms.ComboBox tenDocGiaCb;
         public DevExpress.XtraEditors.LabelControl labelControl6;
         public DevExpress.XtraEditors.LabelControl labelControl2;
-        public DevExpress.XtraEditors.TextEdit maPhieuMuonSachTxt;
-        public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.PanelControl panelControl5;
         public DevExpress.XtraEditors.PanelControl panelControl4;
         public DevExpress.XtraEditors.PanelControl panelControl3;
@@ -562,5 +558,7 @@
         public DevExpress.XtraEditors.PanelControl panelControl1;
         public DevExpress.XtraEditors.DateEdit ngayMuonDtp;
         public DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;
+        public System.Windows.Forms.ComboBox maSachCb;
+        public DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

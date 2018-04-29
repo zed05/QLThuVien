@@ -115,9 +115,24 @@ namespace QLThuVien
             this.Close();
         }
 
-        private void exitMainFrmBtn_Click(object sender, EventArgs e)
+        private void exitFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void nhanVienGridView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down)
+            {
+                nv.loadRowSelected(this);
+                if (addBtn)
+                {
+                    addBtn = false;
+                    nv.enableObject(this, false);
+                    nv.setButton(this, true);
+                    nv.loadRowSelected(this);
+                }
+            }
         }
     }
 }

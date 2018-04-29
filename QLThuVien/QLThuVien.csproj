@@ -67,6 +67,7 @@
     <Compile Include="ClassConnection.cs" />
     <Compile Include="ClassDocGia.cs" />
     <Compile Include="ClassLoaiSach.cs" />
+    <Compile Include="ClassMainFrm.cs" />
     <Compile Include="ClassNhanVien.cs" />
     <Compile Include="ClassPhieuMuonSach.cs" />
     <Compile Include="ClassPhieuThuTien.cs" />
@@ -254,6 +255,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-access-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-more-details-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

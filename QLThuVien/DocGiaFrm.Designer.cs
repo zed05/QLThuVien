@@ -48,18 +48,14 @@
             this.ngayHetHanDT = new DevExpress.XtraEditors.DateEdit();
             this.ngayLapTheDT = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.tenDocGiaTxt = new DevExpress.XtraEditors.TextEdit();
-            this.tienNoTxt = new DevExpress.XtraEditors.TextEdit();
             this.diaChiTxt = new DevExpress.XtraEditors.TextEdit();
             this.emailTxt = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.maDocGiaTxt = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.docGiaGridControl = new DevExpress.XtraGrid.GridControl();
             this.docGiaGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.bar1 = new DevExpress.XtraBars.Bar();
@@ -82,10 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ngayLapTheDT.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ngayLapTheDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenDocGiaTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tienNoTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maDocGiaTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaGridView)).BeginInit();
             this.SuspendLayout();
@@ -364,18 +358,14 @@
             this.panelControl5.Controls.Add(this.ngayHetHanDT);
             this.panelControl5.Controls.Add(this.ngayLapTheDT);
             this.panelControl5.Controls.Add(this.labelControl6);
-            this.panelControl5.Controls.Add(this.labelControl8);
             this.panelControl5.Controls.Add(this.labelControl5);
             this.panelControl5.Controls.Add(this.labelControl4);
             this.panelControl5.Controls.Add(this.labelControl3);
             this.panelControl5.Controls.Add(this.labelControl2);
             this.panelControl5.Controls.Add(this.tenDocGiaTxt);
-            this.panelControl5.Controls.Add(this.tienNoTxt);
             this.panelControl5.Controls.Add(this.diaChiTxt);
             this.panelControl5.Controls.Add(this.emailTxt);
             this.panelControl5.Controls.Add(this.labelControl7);
-            this.panelControl5.Controls.Add(this.maDocGiaTxt);
-            this.panelControl5.Controls.Add(this.labelControl1);
             this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl5.Location = new System.Drawing.Point(2, 526);
             this.panelControl5.Name = "panelControl5";
@@ -385,7 +375,7 @@
             // ngaySinhDT
             // 
             this.ngaySinhDT.EditValue = new System.DateTime(2018, 4, 20, 15, 24, 44, 153);
-            this.ngaySinhDT.Location = new System.Drawing.Point(899, 82);
+            this.ngaySinhDT.Location = new System.Drawing.Point(650, 81);
             this.ngaySinhDT.Name = "ngaySinhDT";
             this.ngaySinhDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngaySinhDT.Properties.Appearance.Options.UseFont = true;
@@ -394,13 +384,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ngaySinhDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ngaySinhDT.Size = new System.Drawing.Size(320, 32);
+            this.ngaySinhDT.Size = new System.Drawing.Size(394, 32);
             this.ngaySinhDT.TabIndex = 2;
             // 
             // ngayHetHanDT
             // 
             this.ngayHetHanDT.EditValue = new System.DateTime(2018, 4, 20, 15, 25, 10, 475);
-            this.ngayHetHanDT.Location = new System.Drawing.Point(899, 211);
+            this.ngayHetHanDT.Location = new System.Drawing.Point(1233, 210);
             this.ngayHetHanDT.Name = "ngayHetHanDT";
             this.ngayHetHanDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayHetHanDT.Properties.Appearance.Options.UseFont = true;
@@ -409,13 +399,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ngayHetHanDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ngayHetHanDT.Size = new System.Drawing.Size(320, 32);
+            this.ngayHetHanDT.Size = new System.Drawing.Size(394, 32);
             this.ngayHetHanDT.TabIndex = 2;
             // 
             // ngayLapTheDT
             // 
             this.ngayLapTheDT.EditValue = new System.DateTime(2018, 4, 20, 15, 25, 10, 475);
-            this.ngayLapTheDT.Location = new System.Drawing.Point(482, 211);
+            this.ngayLapTheDT.Location = new System.Drawing.Point(650, 210);
             this.ngayLapTheDT.Name = "ngayLapTheDT";
             this.ngayLapTheDT.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayLapTheDT.Properties.Appearance.Options.UseFont = true;
@@ -424,34 +414,24 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ngayLapTheDT.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ngayLapTheDT.Size = new System.Drawing.Size(320, 32);
+            this.ngayLapTheDT.Size = new System.Drawing.Size(394, 32);
             this.ngayLapTheDT.TabIndex = 2;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(899, 168);
+            this.labelControl6.Location = new System.Drawing.Point(1233, 167);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(126, 24);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "Ngày hết hạn:";
             // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(1307, 169);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(74, 24);
-            this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "Tiền nợ:";
-            // 
             // labelControl5
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(1307, 40);
+            this.labelControl5.Location = new System.Drawing.Point(1233, 39);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(68, 24);
             this.labelControl5.TabIndex = 0;
@@ -461,7 +441,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(899, 41);
+            this.labelControl4.Location = new System.Drawing.Point(650, 40);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(94, 24);
             this.labelControl4.TabIndex = 0;
@@ -471,7 +451,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(482, 169);
+            this.labelControl3.Location = new System.Drawing.Point(650, 168);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(120, 24);
             this.labelControl3.TabIndex = 0;
@@ -481,7 +461,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(482, 41);
+            this.labelControl2.Location = new System.Drawing.Point(82, 39);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(111, 24);
             this.labelControl2.TabIndex = 0;
@@ -489,83 +469,49 @@
             // 
             // tenDocGiaTxt
             // 
-            this.tenDocGiaTxt.Location = new System.Drawing.Point(482, 84);
+            this.tenDocGiaTxt.Location = new System.Drawing.Point(82, 82);
             this.tenDocGiaTxt.Name = "tenDocGiaTxt";
             this.tenDocGiaTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.tenDocGiaTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenDocGiaTxt.Properties.Appearance.Options.UseBorderColor = true;
             this.tenDocGiaTxt.Properties.Appearance.Options.UseFont = true;
             this.tenDocGiaTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.tenDocGiaTxt.Size = new System.Drawing.Size(320, 30);
+            this.tenDocGiaTxt.Size = new System.Drawing.Size(394, 30);
             this.tenDocGiaTxt.TabIndex = 1;
-            // 
-            // tienNoTxt
-            // 
-            this.tienNoTxt.Location = new System.Drawing.Point(1307, 212);
-            this.tienNoTxt.Name = "tienNoTxt";
-            this.tienNoTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.tienNoTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tienNoTxt.Properties.Appearance.Options.UseBorderColor = true;
-            this.tienNoTxt.Properties.Appearance.Options.UseFont = true;
-            this.tienNoTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.tienNoTxt.Size = new System.Drawing.Size(320, 30);
-            this.tienNoTxt.TabIndex = 1;
             // 
             // diaChiTxt
             // 
-            this.diaChiTxt.Location = new System.Drawing.Point(1307, 83);
+            this.diaChiTxt.Location = new System.Drawing.Point(1233, 82);
             this.diaChiTxt.Name = "diaChiTxt";
             this.diaChiTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.diaChiTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diaChiTxt.Properties.Appearance.Options.UseBorderColor = true;
             this.diaChiTxt.Properties.Appearance.Options.UseFont = true;
             this.diaChiTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.diaChiTxt.Size = new System.Drawing.Size(320, 30);
+            this.diaChiTxt.Size = new System.Drawing.Size(394, 30);
             this.diaChiTxt.TabIndex = 1;
             // 
             // emailTxt
             // 
-            this.emailTxt.Location = new System.Drawing.Point(61, 212);
+            this.emailTxt.Location = new System.Drawing.Point(82, 211);
             this.emailTxt.Name = "emailTxt";
             this.emailTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.emailTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTxt.Properties.Appearance.Options.UseBorderColor = true;
             this.emailTxt.Properties.Appearance.Options.UseFont = true;
             this.emailTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.emailTxt.Size = new System.Drawing.Size(320, 30);
+            this.emailTxt.Size = new System.Drawing.Size(394, 30);
             this.emailTxt.TabIndex = 1;
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(61, 170);
+            this.labelControl7.Location = new System.Drawing.Point(82, 169);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(56, 24);
             this.labelControl7.TabIndex = 0;
             this.labelControl7.Text = "Email:";
-            // 
-            // maDocGiaTxt
-            // 
-            this.maDocGiaTxt.Location = new System.Drawing.Point(61, 82);
-            this.maDocGiaTxt.Name = "maDocGiaTxt";
-            this.maDocGiaTxt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.maDocGiaTxt.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maDocGiaTxt.Properties.Appearance.Options.UseBorderColor = true;
-            this.maDocGiaTxt.Properties.Appearance.Options.UseFont = true;
-            this.maDocGiaTxt.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.maDocGiaTxt.Size = new System.Drawing.Size(320, 30);
-            this.maDocGiaTxt.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(61, 40);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(103, 24);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Mã đọc giả:";
             // 
             // docGiaGridControl
             // 
@@ -593,6 +539,8 @@
             this.docGiaGridView.Appearance.HeaderPanel.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.docGiaGridView.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.docGiaGridView.Appearance.Row.Options.UseFont = true;
+            this.docGiaGridView.Appearance.Row.Options.UseTextOptions = true;
+            this.docGiaGridView.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.docGiaGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.docGiaGridView.AppearancePrint.EvenRow.Options.UseFont = true;
             this.docGiaGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
@@ -602,6 +550,7 @@
             this.docGiaGridView.OptionsBehavior.ReadOnly = true;
             this.docGiaGridView.OptionsPrint.EnableAppearanceEvenRow = true;
             this.docGiaGridView.OptionsView.ShowGroupPanel = false;
+            this.docGiaGridView.KeyUp += new System.Windows.Forms.KeyEventHandler(this.docGiaGridView_KeyUp);
             this.docGiaGridView.Click += new System.EventHandler(this.docGiaGridView_Click);
             // 
             // bar1
@@ -638,6 +587,7 @@
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "DocGiaFrm";
             this.Text = "DocGiaFrm";
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
@@ -659,10 +609,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ngayLapTheDT.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ngayLapTheDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tenDocGiaTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tienNoTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diaChiTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.maDocGiaTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.docGiaGridView)).EndInit();
             this.ResumeLayout(false);
@@ -692,14 +640,10 @@
         public DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.TextEdit tenDocGiaTxt;
         public DevExpress.XtraEditors.TextEdit diaChiTxt;
-        public DevExpress.XtraEditors.TextEdit maDocGiaTxt;
-        public DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraGrid.GridControl docGiaGridControl;
         public DevExpress.XtraGrid.Views.Grid.GridView docGiaGridView;
         public DevExpress.XtraEditors.TextEdit emailTxt;
         public DevExpress.XtraEditors.LabelControl labelControl7;
-        public DevExpress.XtraEditors.LabelControl labelControl8;
-        public DevExpress.XtraEditors.TextEdit tienNoTxt;
         public DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         public DevExpress.XtraEditors.DateEdit ngayHetHanDT;
         public DevExpress.XtraEditors.DateEdit ngayLapTheDT;

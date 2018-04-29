@@ -63,7 +63,7 @@
             this.exitBtn.Appearance.Options.UseFont = true;
             this.exitBtn.Appearance.Options.UseForeColor = true;
             this.exitBtn.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(20)))), ((int)(((byte)(12)))));
+            this.exitBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(111)))), ((int)(((byte)(62)))));
             this.exitBtn.AppearanceHovered.Options.UseFont = true;
             this.exitBtn.AppearanceHovered.Options.UseForeColor = true;
             this.exitBtn.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +74,7 @@
             this.exitBtn.Location = new System.Drawing.Point(491, 27);
             this.exitBtn.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.exitBtn.Name = "exitBtn";
+            this.exitBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
             this.exitBtn.Size = new System.Drawing.Size(40, 48);
             this.exitBtn.TabIndex = 4;
             this.exitBtn.Text = "X";
@@ -88,6 +89,7 @@
             this.idLoginTxt.Properties.Appearance.Options.UseFont = true;
             this.idLoginTxt.Size = new System.Drawing.Size(387, 30);
             this.idLoginTxt.TabIndex = 1;
+            this.idLoginTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.idLoginTxt_KeyPress);
             // 
             // labelControl2
             // 
@@ -119,6 +121,7 @@
             this.passLoginTxt.Properties.PasswordChar = '*';
             this.passLoginTxt.Size = new System.Drawing.Size(389, 30);
             this.passLoginTxt.TabIndex = 2;
+            this.passLoginTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passLoginTxt_KeyPress);
             // 
             // submitBtn
             // 
