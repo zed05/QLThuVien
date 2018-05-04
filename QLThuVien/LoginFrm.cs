@@ -39,11 +39,11 @@ namespace QLThuVien
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            //string id = idLoginTxt.Text.Trim();
-            //string pwd = passLoginTxt.Text;
+            string id = idLoginTxt.Text.Trim();
+            string pwd = passLoginTxt.Text;
 
-            string id = "Admin";
-            string pwd = "1";
+            //string id = "Admin";
+            //string pwd = "1";
 
 
             var data = db.database().LOGINs.SingleOrDefault(a => a.IDLOGIN.Trim() == id && a.PWD == pwd);

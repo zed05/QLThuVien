@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLTHUVIEN" Class="DataClassesConnectionDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=ZED\SQLEXPRESS;Initial Catalog=QLTHUVIEN;Integrated Security=True" SettingsObjectName="QLThuVien.Properties.Settings" SettingsPropertyName="QLTHUVIENConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.CHITIETPHIEUMUON" Member="CHITIETPHIEUMUONs">
-    <Type Name="CHITIETPHIEUMUON">
-      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="SACH_CHITIETPHIEUMUON" Member="SACH" ThisKey="MaSach" OtherKey="MaSach" Type="SACH" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="PHIEUMUONSACH_CHITIETPHIEUMUON" Member="PHIEUMUONSACH" ThisKey="MaPhieuMuon" OtherKey="MaPhieuMuon" Type="PHIEUMUONSACH" IsForeignKey="true" />
+  <Table Name="dbo.CHUCVU" Member="CHUCVUs">
+    <Type Name="CHUCVU">
+      <Column Name="MaCV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="CHUCVU_NHANVIEN" Member="NHANVIENs" ThisKey="MaCV" OtherKey="MaCV" Type="NHANVIEN" />
     </Type>
   </Table>
   <Table Name="dbo.SACH" Member="SACHes">
@@ -16,16 +16,9 @@
       <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="NhaXuatBan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="MaLoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="SACH_CHITIETPHIEUMUON" Member="CHITIETPHIEUMUONs" ThisKey="MaSach" OtherKey="MaSach" Type="CHITIETPHIEUMUON" />
+      <Column Name="DonGiaMuon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="SACH_PHIEUMUONSACH" Member="PHIEUMUONSACHes" ThisKey="MaSach" OtherKey="MaSach" Type="PHIEUMUONSACH" />
       <Association Name="LOAI_SACH" Member="LOAI" ThisKey="MaLoai" OtherKey="MaLoai" Type="LOAI" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.CHUCVU" Member="CHUCVUs">
-    <Type Name="CHUCVU">
-      <Column Name="MaCV" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="MoTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Association Name="CHUCVU_NHANVIEN" Member="NHANVIENs" ThisKey="MaCV" OtherKey="MaCV" Type="NHANVIEN" />
     </Type>
   </Table>
   <Table Name="dbo.DOCGIA" Member="DOCGIAs">
@@ -38,7 +31,6 @@
       <Column Name="NgayLapThe" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="NgayHetHan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="DOCGIA_PHIEUMUONSACH" Member="PHIEUMUONSACHes" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="PHIEUMUONSACH" />
-      <Association Name="DOCGIA_PHIEUTHUTIEN" Member="PHIEUTHUTIENs" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="PHIEUTHUTIEN" />
     </Type>
   </Table>
   <Table Name="dbo.LOAI" Member="LOAIs">
@@ -67,7 +59,6 @@
       <Column Name="MaCV" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="NHANVIEN_LOGIN" Member="LOGINs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="LOGIN" />
       <Association Name="NHANVIEN_PHIEUMUONSACH" Member="PHIEUMUONSACHes" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHIEUMUONSACH" />
-      <Association Name="NHANVIEN_PHIEUTHUTIEN" Member="PHIEUTHUTIENs" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="PHIEUTHUTIEN" />
       <Association Name="CHUCVU_NHANVIEN" Member="CHUCVU" ThisKey="MaCV" OtherKey="MaCV" Type="CHUCVU" IsForeignKey="true" />
     </Type>
   </Table>
@@ -77,20 +68,11 @@
       <Column Name="NgayMuon" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="PHIEUMUONSACH_CHITIETPHIEUMUON" Member="CHITIETPHIEUMUONs" ThisKey="MaPhieuMuon" OtherKey="MaPhieuMuon" Type="CHITIETPHIEUMUON" />
+      <Column Name="MaSach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrangThanhToan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="NHANVIEN_PHIEUMUONSACH" Member="NHANVIEN" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="NHANVIEN" IsForeignKey="true" />
+      <Association Name="SACH_PHIEUMUONSACH" Member="SACH" ThisKey="MaSach" OtherKey="MaSach" Type="SACH" IsForeignKey="true" />
       <Association Name="DOCGIA_PHIEUMUONSACH" Member="DOCGIA" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="DOCGIA" IsForeignKey="true" DeleteRule="CASCADE" />
-    </Type>
-  </Table>
-  <Table Name="dbo.PHIEUTHUTIEN" Member="PHIEUTHUTIENs">
-    <Type Name="PHIEUTHUTIEN">
-      <Column Name="MaPhieuThuTien" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="SoTienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoTienThu" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="NHANVIEN_PHIEUTHUTIEN" Member="NHANVIEN" ThisKey="MaNhanVien" OtherKey="MaNhanVien" Type="NHANVIEN" IsForeignKey="true" />
-      <Association Name="DOCGIA_PHIEUTHUTIEN" Member="DOCGIA" ThisKey="MaDocGia" OtherKey="MaDocGia" Type="DOCGIA" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.CHUCVU_PROC" Method="CHUCVU_PROC">
@@ -100,16 +82,16 @@
       <Column Name="MoTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.DOCGIA_PROC" Method="DOCGIA_PROC">
-    <ElementType Name="DOCGIA_PROCResult">
-      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="NgayLapThe" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="NgayHetHan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="TongTienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
+  <Function Name="dbo.SACH_PROC" Method="SACH_PROC">
+    <ElementType Name="SACH_PROCResult">
+      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenSach" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TacGia" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NhaXuatBan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="MaLoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DonGiaMuon" Type="System.Double" DbType="Float" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.LOAISACH_PROC" Method="LOAISACH_PROC">
@@ -138,44 +120,50 @@
       <Column Name="TenCV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.PHIEUTHU_PROC" Method="PHIEUTHU_PROC">
-    <ElementType Name="PHIEUTHU_PROCResult">
-      <Column Name="MaPhieuThuTien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="SoTienNo" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="SoTienThu" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.LAST_DOCGIA_FUNC" Method="LAST_DOCGIA_FUNC" IsComposable="true">
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.SACH_PROC" Method="SACH_PROC">
-    <ElementType Name="SACH_PROCResult">
-      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenSach" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="TacGia" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="NamXuatBan" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NhaXuatBan" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="MaLoai" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-    </ElementType>
+  <Function Name="dbo.TONG_SACH_FUNC" Method="TONG_SACH_FUNC" IsComposable="true">
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.LAST_PHIEUMUON_FUNC" Method="LAST_PHIEUMUON_FUNC" IsComposable="true">
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TONG_DOCGIA_FUNC" Method="TONG_DOCGIA_FUNC" IsComposable="true">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TONG_LOAI_FUNC" Method="TONG_LOAI_FUNC" IsComposable="true">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.TONG_NV_FUNC" Method="TONG_NV_FUNC" IsComposable="true">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DOCGIA_PROC" Method="DOCGIA_PROC">
+    <ElementType Name="DOCGIA_PROCResult">
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="NgayLapThe" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayHetHan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TONG_TIEN_PHIEUMUON_FUNC" Method="TONG_TIEN_PHIEUMUON_FUNC" IsComposable="true">
+    <Return Type="System.Double" />
   </Function>
   <Function Name="dbo.PHIEUMUON_PROC" Method="PHIEUMUON_PROC">
     <ElementType Name="PHIEUMUON_PROCResult">
       <Column Name="MaPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="NgayMuon" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="HoTenDocGia" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
       <Column Name="HoTenNhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaSach" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="TenSach" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
-      <Column Name="MaSach" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MaDocGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaNhanVien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TinhTrangThanhToan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

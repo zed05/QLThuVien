@@ -267,6 +267,7 @@
             this.inBtn.TabIndex = 7;
             this.inBtn.TabStop = false;
             this.inBtn.Text = "IN";
+            this.inBtn.Click += new System.EventHandler(this.inBtn_Click);
             // 
             // kLuuBtn
             // 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 
 namespace QLThuVien
 {
@@ -123,6 +124,12 @@ namespace QLThuVien
                     ls.loadRowSelected(this);
                 }
             }
+        }
+
+        private void inBtn_Click(object sender, EventArgs e)
+        {
+            LoaiReport rp = new LoaiReport();
+            rp.ShowPreview();
         }
     }
 }

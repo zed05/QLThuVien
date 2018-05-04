@@ -70,13 +70,6 @@ namespace QLThuVien
             this.Close();
         }
 
-        private void phieuThuTienFrmBtn_Click(object sender, EventArgs e)
-        {
-            PhieuThuTienFrm f = new PhieuThuTienFrm(loginName);
-            f.Show();
-            this.Hide();
-        }
-
         private void phieuMuonSachFrmBtn_Click(object sender, EventArgs e)
         {
             PhieuMuonSachFrm f = new PhieuMuonSachFrm(loginName);

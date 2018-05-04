@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QLThuVien.LinQ;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace QLThuVien
 {
@@ -32,6 +33,10 @@ namespace QLThuVien
             f.sachGridView.Columns[4].Caption = "Nhà xuất bản";
             f.sachGridView.Columns[5].Visible = false;
             f.sachGridView.Columns[6].Caption = "Tên loại";
+            f.sachGridView.Columns[7].Caption = "Giá tiền";
+            f.sachGridView.Columns[7].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            f.sachGridView.Columns[7].DisplayFormat.FormatString = "C0";
+            f.sachGridView.Columns[7].DisplayFormat.Format = CultureInfo.CreateSpecificCulture("vi-DVN");
         }
 
         public void loadLoaiData(SachFrm f)

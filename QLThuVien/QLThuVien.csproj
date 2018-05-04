@@ -33,14 +33,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
@@ -70,7 +84,6 @@
     <Compile Include="ClassMainFrm.cs" />
     <Compile Include="ClassNhanVien.cs" />
     <Compile Include="ClassPhieuMuonSach.cs" />
-    <Compile Include="ClassPhieuThuTien.cs" />
     <Compile Include="ClassSach.cs" />
     <Compile Include="ClassThongTinDangNhap.cs" />
     <Compile Include="DocGiaFrm.cs">
@@ -79,10 +92,22 @@
     <Compile Include="DocGiaFrm.Designer.cs">
       <DependentUpon>DocGiaFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocGiaReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DocGiaReport.Designer.cs">
+      <DependentUpon>DocGiaReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="LinQ\DataClassesConnection.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesConnection.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoaiReport.Designer.cs">
+      <DependentUpon>LoaiReport.cs</DependentUpon>
     </Compile>
     <Compile Include="LoaiSachFrm.cs">
       <SubType>Form</SubType>
@@ -108,17 +133,23 @@
     <Compile Include="NhanVienFrm.Designer.cs">
       <DependentUpon>NhanVienFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVienReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NhanVienReport.Designer.cs">
+      <DependentUpon>NhanVienReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhieuMuonReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PhieuMuonReport.Designer.cs">
+      <DependentUpon>PhieuMuonReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="PhieuMuonSachFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PhieuMuonSachFrm.Designer.cs">
       <DependentUpon>PhieuMuonSachFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PhieuThuTienFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PhieuThuTienFrm.Designer.cs">
-      <DependentUpon>PhieuThuTienFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +158,12 @@
     </Compile>
     <Compile Include="SachFrm.Designer.cs">
       <DependentUpon>SachFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SachReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SachReport.Designer.cs">
+      <DependentUpon>SachReport.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinDangNhapFrm.cs">
       <SubType>Form</SubType>
@@ -140,6 +177,12 @@
     <EmbeddedResource Include="DocGiaFrm.resx">
       <DependentUpon>DocGiaFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DocGiaReport.resx">
+      <DependentUpon>DocGiaReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiReport.resx">
+      <DependentUpon>LoaiReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoaiSachFrm.resx">
       <DependentUpon>LoaiSachFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,11 +195,14 @@
     <EmbeddedResource Include="NhanVienFrm.resx">
       <DependentUpon>NhanVienFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienReport.resx">
+      <DependentUpon>NhanVienReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhieuMuonReport.resx">
+      <DependentUpon>PhieuMuonReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PhieuMuonSachFrm.resx">
       <DependentUpon>PhieuMuonSachFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PhieuThuTienFrm.resx">
-      <DependentUpon>PhieuThuTienFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -171,6 +217,9 @@
     </Compile>
     <EmbeddedResource Include="SachFrm.resx">
       <DependentUpon>SachFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SachReport.resx">
+      <DependentUpon>SachReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinDangNhapFrm.resx">
       <DependentUpon>ThongTinDangNhapFrm.cs</DependentUpon>

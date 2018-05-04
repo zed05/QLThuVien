@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 
 namespace QLThuVien
 {
@@ -110,13 +111,6 @@ namespace QLThuVien
             this.Close();
         }
 
-        private void phieuThuTienFrmBtn_Click(object sender, EventArgs e)
-        {
-            PhieuThuTienFrm f = new PhieuThuTienFrm(loginName);
-            f.Show();
-            this.Close();
-        }
-
         private void exitMainFrmBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -135,6 +129,12 @@ namespace QLThuVien
                     pm.loadRowSelected(this);
                 }
             }
+        }
+
+        private void inBtn_Click(object sender, EventArgs e)
+        {
+            PhieuMuonReport rp = new PhieuMuonReport();
+            rp.ShowPreview();
         }
     }
 }

@@ -32,10 +32,6 @@ namespace QLThuVien
             f.docGiaGridView.Columns[4].Caption = "Email";
             f.docGiaGridView.Columns[5].Caption = "Ngày lập thẻ";
             f.docGiaGridView.Columns[6].Caption = "Ngày hết hạn";
-            f.docGiaGridView.Columns[7].Caption = "Tiền nợ";
-            f.docGiaGridView.Columns[7].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            f.docGiaGridView.Columns[7].DisplayFormat.FormatString = "C0";
-            f.docGiaGridView.Columns[7].DisplayFormat.Format = CultureInfo.CreateSpecificCulture("vi-DVN");
         }
 
         public void setNull(DocGiaFrm f)
@@ -84,7 +80,7 @@ namespace QLThuVien
         public void add(DocGiaFrm f)
         {
             DOCGIA dg = new DOCGIA();
-            PHIEUTHUTIEN pt = new PHIEUTHUTIEN();
+            PHIEUMUONSACH pm = new PHIEUMUONSACH();
 
             if(f.emailTxt.Text == "" || f.tenDocGiaTxt.Text == "")
             {
@@ -102,12 +98,13 @@ namespace QLThuVien
                 db.database().DOCGIAs.InsertOnSubmit(dg);
                 db.database().SubmitChanges();
 
-                pt.SoTienNo = 0;
-                pt.SoTienThu = 0;
-                pt.MaDocGia = db.database().LAST_DOCGIA_FUNC().Value;
-                pt.MaNhanVien = 1;
+                pm.TinhTrangThanhToan = "Chưa thanh toán";
+                pm.MaDocGia = db.database().LAST_DOCGIA_FUNC().Value;
+                pm.MaNhanVien = 1;
+                pm.NgayMuon = DateTime.Now;
+                pm.MaSach = 1;
 
-                db.database().PHIEUTHUTIENs.InsertOnSubmit(pt);
+                db.database().PHIEUMUONSACHes.InsertOnSubmit(pm);
                 db.database().SubmitChanges();
                 loadAllData(f);
             }
@@ -140,8 +137,8 @@ namespace QLThuVien
             var dg = db.database().DOCGIAs.SingleOrDefault(a => a.MaDocGia == int.Parse(madg));
             db.database().DOCGIAs.DeleteOnSubmit(dg);
 
-            var pt = db.database().PHIEUTHUTIENs.SingleOrDefault(a => a.MaDocGia == int.Parse(madg));
-            db.database().PHIEUTHUTIENs.DeleteOnSubmit(pt);
+            var pm = db.database().PHIEUMUONSACHes.SingleOrDefault(a => a.MaDocGia == int.Parse(madg));
+            db.database().PHIEUMUONSACHes.DeleteOnSubmit(pm);
             db.database().SubmitChanges();
             
             loadAllData(f);

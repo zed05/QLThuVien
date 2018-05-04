@@ -30,7 +30,6 @@
         {
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.phieuMuonSachFrmBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.phieuThuTienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.menuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.DocGiaFrmBtnDis = new DevExpress.XtraEditors.SimpleButton();
@@ -88,7 +87,6 @@
             // 
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.panelControl2.Controls.Add(this.phieuMuonSachFrmBtn);
-            this.panelControl2.Controls.Add(this.phieuThuTienFrmBtn);
             this.panelControl2.Controls.Add(this.menuBtn);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(0, 138);
@@ -120,7 +118,7 @@
             this.phieuMuonSachFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.phieuMuonSachFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_bulleted_list_64;
             this.phieuMuonSachFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.phieuMuonSachFrmBtn.Location = new System.Drawing.Point(2, 227);
+            this.phieuMuonSachFrmBtn.Location = new System.Drawing.Point(2, 197);
             this.phieuMuonSachFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
             this.phieuMuonSachFrmBtn.Name = "phieuMuonSachFrmBtn";
             this.phieuMuonSachFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
@@ -129,40 +127,6 @@
             this.phieuMuonSachFrmBtn.TabStop = false;
             this.phieuMuonSachFrmBtn.Text = "PHIẾU MƯỢN";
             this.phieuMuonSachFrmBtn.Click += new System.EventHandler(this.phieuMuonSachFrmBtn_Click);
-            // 
-            // phieuThuTienFrmBtn
-            // 
-            this.phieuThuTienFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.phieuThuTienFrmBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phieuThuTienFrmBtn.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.phieuThuTienFrmBtn.Appearance.Options.UseFont = true;
-            this.phieuThuTienFrmBtn.Appearance.Options.UseForeColor = true;
-            this.phieuThuTienFrmBtn.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.phieuThuTienFrmBtn.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phieuThuTienFrmBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseBackColor = true;
-            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseFont = true;
-            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseForeColor = true;
-            this.phieuThuTienFrmBtn.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.phieuThuTienFrmBtn.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phieuThuTienFrmBtn.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseBackColor = true;
-            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseFont = true;
-            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseForeColor = true;
-            this.phieuThuTienFrmBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.phieuThuTienFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.phieuThuTienFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_purchase_order_64;
-            this.phieuThuTienFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.phieuThuTienFrmBtn.Location = new System.Drawing.Point(2, 49);
-            this.phieuThuTienFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.phieuThuTienFrmBtn.Name = "phieuThuTienFrmBtn";
-            this.phieuThuTienFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.phieuThuTienFrmBtn.Size = new System.Drawing.Size(230, 147);
-            this.phieuThuTienFrmBtn.TabIndex = 1;
-            this.phieuThuTienFrmBtn.TabStop = false;
-            this.phieuThuTienFrmBtn.Text = "PHIẾU THU";
-            this.phieuThuTienFrmBtn.Click += new System.EventHandler(this.phieuThuTienFrmBtn_Click);
             // 
             // menuBtn
             // 
@@ -264,6 +228,7 @@
             this.inBtn.TabIndex = 7;
             this.inBtn.TabStop = false;
             this.inBtn.Text = "IN";
+            this.inBtn.Click += new System.EventHandler(this.inBtn_Click);
             // 
             // kLuuBtn
             // 
@@ -621,7 +586,6 @@
         public DevExpress.XtraEditors.SimpleButton DocGiaFrmBtnDis;
         public DevExpress.XtraEditors.PanelControl panelControl2;
         public DevExpress.XtraEditors.SimpleButton phieuMuonSachFrmBtn;
-        public DevExpress.XtraEditors.SimpleButton phieuThuTienFrmBtn;
         public DevExpress.XtraEditors.SimpleButton menuBtn;
         public DevExpress.XtraEditors.PanelControl panelControl1;
         public DevExpress.XtraEditors.PanelControl panelControl3;

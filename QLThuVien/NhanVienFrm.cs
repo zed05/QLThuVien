@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLThuVien.LinQ;
+using DevExpress.XtraReports.UI;
 
 namespace QLThuVien
 {
@@ -133,6 +134,12 @@ namespace QLThuVien
                     nv.loadRowSelected(this);
                 }
             }
+        }
+
+        private void inBtn_Click(object sender, EventArgs e)
+        {
+            NhanVienReport rp = new NhanVienReport();
+            rp.ShowPreview();
         }
     }
 }

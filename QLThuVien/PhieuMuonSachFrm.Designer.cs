@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.phieuMuonSachFrmBtnDis = new DevExpress.XtraEditors.SimpleButton();
-            this.phieuThuTienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.docGiaFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.inBtn = new DevExpress.XtraEditors.SimpleButton();
             this.kLuuBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -46,6 +45,9 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.chuaThanhToanRb = new System.Windows.Forms.RadioButton();
+            this.daThanhToanRb = new System.Windows.Forms.RadioButton();
             this.ngayMuonDtp = new DevExpress.XtraEditors.DateEdit();
             this.maSachCb = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -60,6 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ngayMuonDtp.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ngayMuonDtp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -96,40 +100,6 @@
             this.phieuMuonSachFrmBtnDis.TabStop = false;
             this.phieuMuonSachFrmBtnDis.Text = "PHIẾU MƯỢN SÁCH";
             // 
-            // phieuThuTienFrmBtn
-            // 
-            this.phieuThuTienFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.phieuThuTienFrmBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phieuThuTienFrmBtn.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.phieuThuTienFrmBtn.Appearance.Options.UseFont = true;
-            this.phieuThuTienFrmBtn.Appearance.Options.UseForeColor = true;
-            this.phieuThuTienFrmBtn.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(57)))));
-            this.phieuThuTienFrmBtn.AppearanceHovered.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phieuThuTienFrmBtn.AppearanceHovered.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseBackColor = true;
-            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseFont = true;
-            this.phieuThuTienFrmBtn.AppearanceHovered.Options.UseForeColor = true;
-            this.phieuThuTienFrmBtn.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.phieuThuTienFrmBtn.AppearancePressed.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phieuThuTienFrmBtn.AppearancePressed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseBackColor = true;
-            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseFont = true;
-            this.phieuThuTienFrmBtn.AppearancePressed.Options.UseForeColor = true;
-            this.phieuThuTienFrmBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.phieuThuTienFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.phieuThuTienFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_purchase_order_64;
-            this.phieuThuTienFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.phieuThuTienFrmBtn.Location = new System.Drawing.Point(2, 227);
-            this.phieuThuTienFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.phieuThuTienFrmBtn.Name = "phieuThuTienFrmBtn";
-            this.phieuThuTienFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.phieuThuTienFrmBtn.Size = new System.Drawing.Size(230, 147);
-            this.phieuThuTienFrmBtn.TabIndex = 2;
-            this.phieuThuTienFrmBtn.TabStop = false;
-            this.phieuThuTienFrmBtn.Text = "PHIẾU THU";
-            this.phieuThuTienFrmBtn.Click += new System.EventHandler(this.phieuThuTienFrmBtn_Click);
-            // 
             // docGiaFrmBtn
             // 
             this.docGiaFrmBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -154,7 +124,7 @@
             this.docGiaFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.docGiaFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_name_tag_64;
             this.docGiaFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.docGiaFrmBtn.Location = new System.Drawing.Point(2, 49);
+            this.docGiaFrmBtn.Location = new System.Drawing.Point(2, 182);
             this.docGiaFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
             this.docGiaFrmBtn.Name = "docGiaFrmBtn";
             this.docGiaFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
@@ -177,6 +147,7 @@
             this.inBtn.TabIndex = 7;
             this.inBtn.TabStop = false;
             this.inBtn.Text = "IN";
+            this.inBtn.Click += new System.EventHandler(this.inBtn_Click);
             // 
             // kLuuBtn
             // 
@@ -302,7 +273,7 @@
             this.tenNhanVienCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tenNhanVienCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenNhanVienCb.FormattingEnabled = true;
-            this.tenNhanVienCb.Location = new System.Drawing.Point(294, 203);
+            this.tenNhanVienCb.Location = new System.Drawing.Point(1250, 81);
             this.tenNhanVienCb.Name = "tenNhanVienCb";
             this.tenNhanVienCb.Size = new System.Drawing.Size(368, 32);
             this.tenNhanVienCb.TabIndex = 3;
@@ -311,7 +282,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(294, 160);
+            this.labelControl4.Location = new System.Drawing.Point(1250, 38);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(222, 24);
             this.labelControl4.TabIndex = 0;
@@ -323,7 +294,7 @@
             this.tenDocGiaCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tenDocGiaCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tenDocGiaCb.FormattingEnabled = true;
-            this.tenDocGiaCb.Location = new System.Drawing.Point(1015, 85);
+            this.tenDocGiaCb.Location = new System.Drawing.Point(687, 81);
             this.tenDocGiaCb.Name = "tenDocGiaCb";
             this.tenDocGiaCb.Size = new System.Drawing.Size(368, 32);
             this.tenDocGiaCb.TabIndex = 3;
@@ -332,7 +303,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(1015, 43);
+            this.labelControl6.Location = new System.Drawing.Point(687, 39);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(111, 24);
             this.labelControl6.TabIndex = 0;
@@ -342,7 +313,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(294, 43);
+            this.labelControl2.Location = new System.Drawing.Point(129, 39);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(109, 24);
             this.labelControl2.TabIndex = 0;
@@ -351,6 +322,7 @@
             // panelControl5
             // 
             this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl5.Controls.Add(this.groupControl1);
             this.panelControl5.Controls.Add(this.ngayMuonDtp);
             this.panelControl5.Controls.Add(this.maSachCb);
             this.panelControl5.Controls.Add(this.labelControl1);
@@ -365,10 +337,46 @@
             this.panelControl5.Size = new System.Drawing.Size(1687, 282);
             this.panelControl5.TabIndex = 1;
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.Appearance.Options.UseFont = true;
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.Controls.Add(this.chuaThanhToanRb);
+            this.groupControl1.Controls.Add(this.daThanhToanRb);
+            this.groupControl1.Location = new System.Drawing.Point(687, 157);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(368, 100);
+            this.groupControl1.TabIndex = 5;
+            this.groupControl1.Text = "Tình trạng thanh toán";
+            // 
+            // chuaThanhToanRb
+            // 
+            this.chuaThanhToanRb.AutoSize = true;
+            this.chuaThanhToanRb.Checked = true;
+            this.chuaThanhToanRb.Location = new System.Drawing.Point(11, 44);
+            this.chuaThanhToanRb.Name = "chuaThanhToanRb";
+            this.chuaThanhToanRb.Size = new System.Drawing.Size(180, 28);
+            this.chuaThanhToanRb.TabIndex = 0;
+            this.chuaThanhToanRb.TabStop = true;
+            this.chuaThanhToanRb.Text = "Chưa thanh toán";
+            this.chuaThanhToanRb.UseVisualStyleBackColor = true;
+            // 
+            // daThanhToanRb
+            // 
+            this.daThanhToanRb.AutoSize = true;
+            this.daThanhToanRb.Location = new System.Drawing.Point(201, 44);
+            this.daThanhToanRb.Name = "daThanhToanRb";
+            this.daThanhToanRb.Size = new System.Drawing.Size(159, 28);
+            this.daThanhToanRb.TabIndex = 0;
+            this.daThanhToanRb.Text = "Đã thanh toán";
+            this.daThanhToanRb.UseVisualStyleBackColor = true;
+            // 
             // ngayMuonDtp
             // 
             this.ngayMuonDtp.EditValue = null;
-            this.ngayMuonDtp.Location = new System.Drawing.Point(294, 85);
+            this.ngayMuonDtp.Location = new System.Drawing.Point(129, 81);
             this.ngayMuonDtp.Name = "ngayMuonDtp";
             this.ngayMuonDtp.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ngayMuonDtp.Properties.Appearance.Options.UseFont = true;
@@ -386,7 +394,7 @@
             this.maSachCb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maSachCb.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maSachCb.FormattingEnabled = true;
-            this.maSachCb.Location = new System.Drawing.Point(1015, 203);
+            this.maSachCb.Location = new System.Drawing.Point(129, 200);
             this.maSachCb.Name = "maSachCb";
             this.maSachCb.Size = new System.Drawing.Size(368, 32);
             this.maSachCb.TabIndex = 3;
@@ -395,7 +403,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(1015, 160);
+            this.labelControl1.Location = new System.Drawing.Point(129, 157);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(79, 24);
             this.labelControl1.TabIndex = 0;
@@ -431,7 +439,6 @@
             // panelControl2
             // 
             this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.panelControl2.Controls.Add(this.phieuThuTienFrmBtn);
             this.panelControl2.Controls.Add(this.docGiaFrmBtn);
             this.panelControl2.Controls.Add(this.menuBtn);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -517,6 +524,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ngayMuonDtp.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ngayMuonDtp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
@@ -534,7 +544,6 @@
         #endregion
 
         public DevExpress.XtraEditors.SimpleButton phieuMuonSachFrmBtnDis;
-        public DevExpress.XtraEditors.SimpleButton phieuThuTienFrmBtn;
         public DevExpress.XtraEditors.SimpleButton docGiaFrmBtn;
         public DevExpress.XtraEditors.SimpleButton inBtn;
         public DevExpress.XtraEditors.SimpleButton kLuuBtn;
@@ -560,5 +569,8 @@
         public DevExpress.XtraEditors.SimpleButton exitMainFrmBtn;
         public System.Windows.Forms.ComboBox maSachCb;
         public DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        public System.Windows.Forms.RadioButton chuaThanhToanRb;
+        public System.Windows.Forms.RadioButton daThanhToanRb;
     }
 }

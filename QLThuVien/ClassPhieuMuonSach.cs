@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QLThuVien.LinQ;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace QLThuVien
 {
@@ -26,17 +27,23 @@ namespace QLThuVien
 
             f.phieuMuonSachGridView.Columns[0].Caption = "Mã phiếu mượn";
             f.phieuMuonSachGridView.Columns[1].Caption = "Ngày mượn";
-            f.phieuMuonSachGridView.Columns[2].Visible = false;
-            f.phieuMuonSachGridView.Columns[3].Visible = false;
-            f.phieuMuonSachGridView.Columns[4].Caption = "Tên đọc giả";
-            f.phieuMuonSachGridView.Columns[5].Caption = "Tên nhân viên";
-            f.phieuMuonSachGridView.Columns[6].Caption = "Tên Sách";
+            f.phieuMuonSachGridView.Columns[2].Caption = "Tên đọc giả";
+            f.phieuMuonSachGridView.Columns[3].Caption = "Tên nhân viên";
+            f.phieuMuonSachGridView.Columns[4].Visible = false;
+            f.phieuMuonSachGridView.Columns[5].Caption = "Tên sách";
+            f.phieuMuonSachGridView.Columns[6].Visible = false;
             f.phieuMuonSachGridView.Columns[7].Visible = false;
+            f.phieuMuonSachGridView.Columns[8].Caption = "Giá tiền";
+            f.phieuMuonSachGridView.Columns[8].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            f.phieuMuonSachGridView.Columns[8].DisplayFormat.FormatString = "C0";
+            f.phieuMuonSachGridView.Columns[8].DisplayFormat.Format = CultureInfo.CreateSpecificCulture("vi-DVN");
+            f.phieuMuonSachGridView.Columns[9].Caption = "Tình trạng";
         }
 
         public void setNull(PhieuMuonSachFrm f)
         {
             f.ngayMuonDtp.EditValue = DateTime.Now;
+            f.chuaThanhToanRb.Checked = true;
         }
 
         public void setButton(PhieuMuonSachFrm f, bool val)
@@ -55,6 +62,8 @@ namespace QLThuVien
             f.tenDocGiaCb.Enabled = val;
             f.tenNhanVienCb.Enabled = val;
             f.maSachCb.Enabled = val;
+            f.chuaThanhToanRb.Enabled = val;
+            f.daThanhToanRb.Enabled = val;
 
             if(f.tenNhanVienCb.Enabled == true && f.tenDocGiaCb.Enabled == true)
             {
@@ -78,17 +87,22 @@ namespace QLThuVien
         public void add(PhieuMuonSachFrm f)
         {
             PHIEUMUONSACH pm = new PHIEUMUONSACH();
-            CHITIETPHIEUMUON cpm = new CHITIETPHIEUMUON();
 
             pm.NgayMuon = Convert.ToDateTime(f.ngayMuonDtp.Text);
             pm.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());
             pm.MaNhanVien = int.Parse(f.tenNhanVienCb.SelectedValue.ToString());
-            db.database().PHIEUMUONSACHes.InsertOnSubmit(pm);
-            db.database().SubmitChanges();
+            pm.MaSach = int.Parse(f.maSachCb.SelectedValue.ToString());
 
-            cpm.MaSach = int.Parse(f.maSachCb.SelectedValue.ToString());
-            cpm.MaPhieuMuon = db.database().LAST_PHIEUMUON_FUNC().Value;
-            db.database().CHITIETPHIEUMUONs.InsertOnSubmit(cpm);
+            if (f.chuaThanhToanRb.Checked)
+            {
+                pm.TinhTrangThanhToan = "Chưa thanh toán";
+            }
+            else
+            {
+                pm.TinhTrangThanhToan = "Đã thanh toán";
+            }
+            
+            db.database().PHIEUMUONSACHes.InsertOnSubmit(pm);
             db.database().SubmitChanges();
 
             loadAllData(f);
@@ -96,28 +110,29 @@ namespace QLThuVien
 
         public void edit(PhieuMuonSachFrm f)
         {
-            //var pm = db.database().PHIEUMUONSACHes.SingleOrDefault(a => a.MaPhieuMuon == int.Parse(mapm));
-            //var cpm = db.database().CHITIETPHIEUMUONs.SingleOrDefault(b => b.MaPhieuMuon == int.Parse(mapm));
+            var pm = db.database().PHIEUMUONSACHes.SingleOrDefault(a => a.MaPhieuMuon == int.Parse(mapm));
 
-            //pm.NgayMuon = Convert.ToDateTime(f.ngayMuonDtp.Text);
-            //pm.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());
-            //pm.MaNhanVien = int.Parse(f.tenNhanVienCb.SelectedValue.ToString());
-            //db.database().SubmitChanges();
+            pm.NgayMuon = Convert.ToDateTime(f.ngayMuonDtp.Text);
+            pm.MaDocGia = int.Parse(f.tenDocGiaCb.SelectedValue.ToString());
+            pm.MaNhanVien = int.Parse(f.tenNhanVienCb.SelectedValue.ToString());
+            pm.MaSach = int.Parse(f.maSachCb.SelectedValue.ToString());
 
-            //cpm.MaSach = int.Parse(f.maSachCb.SelectedValue.ToString());
-            //db.database().SubmitChanges();
+            if (f.chuaThanhToanRb.Checked)
+            {
+                pm.TinhTrangThanhToan = "Chưa thanh toán";
+            }
+            else
+            {
+                pm.TinhTrangThanhToan = "Đã thanh toán";
+            }
 
-            //loadAllData(f);
+            db.database().SubmitChanges();
+            loadAllData(f);
         }
 
         public void delete(PhieuMuonSachFrm f)
         {
             var pm = db.database().PHIEUMUONSACHes.SingleOrDefault(a => a.MaPhieuMuon == int.Parse(mapm));
-            var cpm = db.database().CHITIETPHIEUMUONs.SingleOrDefault(b => b.MaPhieuMuon == int.Parse(mapm));
-
-            // Xóa dữ liệu trong bảng CHITIETPHIEUMUON trước để tránh lỗi khóa ngoại
-            db.database().CHITIETPHIEUMUONs.DeleteOnSubmit(cpm);
-            db.database().SubmitChanges();
 
             db.database().PHIEUMUONSACHes.DeleteOnSubmit(pm);
             db.database().SubmitChanges();

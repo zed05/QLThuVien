@@ -44,7 +44,6 @@
             this.sachFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.phieuMuonSachFrmBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.phieuThuTienFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             this.docGiaFrmBtn = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -280,7 +279,6 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.phieuMuonSachFrmBtn);
-            this.groupControl1.Controls.Add(this.phieuThuTienFrmBtn);
             this.groupControl1.Controls.Add(this.docGiaFrmBtn);
             this.groupControl1.Location = new System.Drawing.Point(22, 11);
             this.groupControl1.Name = "groupControl1";
@@ -301,7 +299,7 @@
             this.phieuMuonSachFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.phieuMuonSachFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_bulleted_list_64;
             this.phieuMuonSachFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.phieuMuonSachFrmBtn.Location = new System.Drawing.Point(235, 233);
+            this.phieuMuonSachFrmBtn.Location = new System.Drawing.Point(119, 233);
             this.phieuMuonSachFrmBtn.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.phieuMuonSachFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
             this.phieuMuonSachFrmBtn.Name = "phieuMuonSachFrmBtn";
@@ -311,29 +309,6 @@
             this.phieuMuonSachFrmBtn.TabStop = false;
             this.phieuMuonSachFrmBtn.Text = "PHIẾU MƯỢN SÁCH";
             this.phieuMuonSachFrmBtn.Click += new System.EventHandler(this.phieuMuonSachFrmBtn_Click);
-            // 
-            // phieuThuTienFrmBtn
-            // 
-            this.phieuThuTienFrmBtn.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.phieuThuTienFrmBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phieuThuTienFrmBtn.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.phieuThuTienFrmBtn.Appearance.Options.UseBackColor = true;
-            this.phieuThuTienFrmBtn.Appearance.Options.UseFont = true;
-            this.phieuThuTienFrmBtn.Appearance.Options.UseForeColor = true;
-            this.phieuThuTienFrmBtn.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.phieuThuTienFrmBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.phieuThuTienFrmBtn.ImageOptions.Image = global::QLThuVien.Properties.Resources.icons8_purchase_order_64;
-            this.phieuThuTienFrmBtn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.phieuThuTienFrmBtn.Location = new System.Drawing.Point(5, 233);
-            this.phieuThuTienFrmBtn.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
-            this.phieuThuTienFrmBtn.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.phieuThuTienFrmBtn.Name = "phieuThuTienFrmBtn";
-            this.phieuThuTienFrmBtn.ShowFocusRectangle = DevExpress.Utils.DefaultBoolean.False;
-            this.phieuThuTienFrmBtn.Size = new System.Drawing.Size(222, 132);
-            this.phieuThuTienFrmBtn.TabIndex = 1;
-            this.phieuThuTienFrmBtn.TabStop = false;
-            this.phieuThuTienFrmBtn.Text = "PHIẾU THU TIỀN";
-            this.phieuThuTienFrmBtn.Click += new System.EventHandler(this.phieuThuTienFrmBtn_Click);
             // 
             // docGiaFrmBtn
             // 
@@ -395,7 +370,6 @@
         public DevExpress.XtraEditors.GroupControl groupControl2;
         public DevExpress.XtraEditors.SimpleButton docGiaFrmBtn;
         public DevExpress.XtraEditors.SimpleButton phieuMuonSachFrmBtn;
-        public DevExpress.XtraEditors.SimpleButton phieuThuTienFrmBtn;
         public DevExpress.XtraEditors.SimpleButton sachFrmBtn;
         public DevExpress.XtraEditors.SimpleButton loaiSachFrmBtn;
         public DevExpress.XtraEditors.GroupControl groupControl3;

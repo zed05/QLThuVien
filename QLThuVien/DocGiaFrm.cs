@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraReports.UI;
 
 namespace QLThuVien
 {
@@ -101,13 +102,6 @@ namespace QLThuVien
             dg.loadRowSelected(this);
         }
 
-        private void phieuThuTienFrmBtn_Click(object sender, EventArgs e)
-        {
-            PhieuThuTienFrm f = new PhieuThuTienFrm(loginName);
-            f.Show();
-            this.Close();
-        }
-
         private void phieuMuonSachFrmBtn_Click(object sender, EventArgs e)
         {
             PhieuMuonSachFrm f = new PhieuMuonSachFrm(loginName);
@@ -133,6 +127,12 @@ namespace QLThuVien
                     dg.loadRowSelected(this);
                 }
             }
+        }
+
+        private void inBtn_Click(object sender, EventArgs e)
+        {
+            DocGiaReport rp = new DocGiaReport();
+            rp.ShowPreview();
         }
     }
 }

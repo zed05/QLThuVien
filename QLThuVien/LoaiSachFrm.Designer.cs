@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             this.inBtn = new DevExpress.XtraEditors.SimpleButton();
             this.kLuuBtn = new DevExpress.XtraEditors.SimpleButton();
             this.luuBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -76,6 +76,7 @@
             this.inBtn.TabIndex = 7;
             this.inBtn.TabStop = false;
             this.inBtn.Text = "IN";
+            this.inBtn.Click += new System.EventHandler(this.inBtn_Click);
             // 
             // kLuuBtn
             // 
@@ -352,9 +353,9 @@
             this.loaiSachGridView.AppearancePrint.EvenRow.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loaiSachGridView.AppearancePrint.EvenRow.Options.UseFont = true;
             this.loaiSachGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            gridFormatRule2.Name = "Format0";
-            gridFormatRule2.Rule = null;
-            this.loaiSachGridView.FormatRules.Add(gridFormatRule2);
+            gridFormatRule1.Name = "Format0";
+            gridFormatRule1.Rule = null;
+            this.loaiSachGridView.FormatRules.Add(gridFormatRule1);
             this.loaiSachGridView.GridControl = this.loaiSachGridControl;
             this.loaiSachGridView.Name = "loaiSachGridView";
             this.loaiSachGridView.OptionsBehavior.Editable = false;
